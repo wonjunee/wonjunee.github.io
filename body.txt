@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="empty-row-4"></div>
+    
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <h3>Wonjun Lee</h3>
+                <%personal%>
+                <%office%>
+            </div>
+
+            
+
+            <div class="col-md-3">
+                <img src="https://avatars2.githubusercontent.com/u/17661230?s=460&v=4" alt="profile photo" 
+            style="
+                width:150px;
+                height:150px;
+                border-radius:10px;
+                margin-top:20px;">
+            </div>
+
+            <div class="col-md-2"></div>
+
+            <!-- <div class="col-md-4"> </div> -->
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <p> I am an applied math Ph.D. candidate studying under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4>Email</h4>
+                <p>wlee at math.ucla.edu</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4>Research Interests</h4>
+                <p>Computational Math, Optimal Transport, Gradient Flows, Mean Field Games</p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4><a href="./publications">Publications</a></h4>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+
+    <div class="empty-row-1"></div>
+
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4>Current Teaching</h4>
+                <p><a href="./pic10c_21s">2021 Spring - PIC 10C: Advanced Programming</a></p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4><a href="./past_teaching">Past Teaching</a></h4>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h4><a href="./tutoring">Tutoring</a></h4>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="bottom-blank">
+    </div>
+</body>
+
+</html>                

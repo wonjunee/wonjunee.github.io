@@ -1,0 +1,337 @@
+  <div class="container bg-3 text-left">
+    <h3>Week3</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW3_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW3_1()">Enter</button>
+<script>
+function validatePassW3_1(){
+    if(document.getElementById('passwordW3_1').value == 'brav0'){
+        open('https://youtu.be/QSP2g5dCGc0')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>Exercise P8.1.</h5> 
+    <p> Derive a class Programmer from <b>Employee</b>. Supply a constructor <b>Programmer(string name, double salary)</b> that calls the base-class constructor. Supply a function get_name that returns the name in the format <i>"Hacker, Harry (Programmer)".</i></p>
+    <br>
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Employee
+{
+public:
+  Employee();
+  Employee(string pname, double psalary);
+protected: // Inherited classes can use these member variables
+  string name;
+  double salary;
+};
+
+Employee::Employee():name(""), salary(0) {}
+Employee::Employee(string pname, double psalary):name(pname), salary(psalary) {}
+
+class Programmer: public Employee
+{
+pulbic:
+  Programmer();
+  Programmer(string pname, double psalary);
+  string get_name() const;
+};
+
+Programmer::Programmer(): Employee() {}
+Programmer::Programmer(string pname, double psalary): Employee() {}
+
+string Programmer::get_name() const
+{
+  string new_name = name + " (Programmer)";
+  return new_name;
+}
+
+int main()
+{
+  Programmer A("John", 100);
+  cout << A.get_name() << endl;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        
+<h5>Exercise P8.2. </h5> 
+<p>Implement a base class Person. Derive classes Student and Instructor from Person. A person has a name and a birthday. A student has a major, and an instructor has a salary. Write the class deﬁnitions, the constructors, and the member functions print() for all classes.</p>
+
+    <br>
+
+<h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Person
+{
+public:
+  Person();
+  Person(string pname, string pdob);
+
+  void print() const;
+protected:
+  string name;
+  string dob;
+};
+
+Person::Person(){
+  name = "default";
+  dob = "00/0/0/000";
+}
+Person::Person(string pname, string pdob): name(pname), dob(pdob) {}
+
+void Person::print() const{
+  cout  << "name : " << name << " dob : " << dob << endl;
+}
+
+class Student: public Person
+{
+public:
+  Student();
+  Student(string pname, string pdob, string pmajor);
+
+  void print() const;
+private:
+  string major;
+};
+
+Student::Student():Person(), major("NONE") {}
+Student::Student(string pname, string pdob, string pmajor): Person(pname, pdob), major(pmajor) {}
+
+void Student::print() const{
+  cout  << "name : " << name << " dob : " << dob << " major : " << major << endl;
+}
+
+class Instructor: public Person
+{
+public:
+  Instructor();
+  Instructor(string pname, string pdob, double psalary);
+
+  void print() const;
+private:
+  double salary;
+};
+
+Instructor::Instructor():Person(), salary(0) {}
+Instructor::Instructor(string pname, string pdob, double psalary): Person(pname, pdob), salary(psalary) {}
+
+void Instructor::print() const{
+  cout  << "name : " << name << " dob : " << dob << " salary : " << salary << endl;
+}
+
+int main(){
+  Person a1("JOhn", "1231231");
+  Student a2("Paul", "2324254", "math");
+  Instructor a3("George", "699393", 100);
+
+  a1.print();
+  a2.print();
+  a3.print();
+}
+</pre>
+
+
+      </div>
+      <div class="col-sm-1"></div>
+
+
+    </div>
+
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Office Hours</h3> 
+    <h5>Link to the video (part 1/2)</h5>
+    <p >Enter password: <input id='passwordW3_oh1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW3_oh1()">Enter</button>
+    <script>
+    function validatePassW3_oh1(){
+        if(document.getElementById('passwordW3_oh1').value == 'brav0'){
+            open('https://youtu.be/rLNmzMRUO4w')
+            return true;
+        }else{
+            alert('wrong password!!');
+            return false;
+        }
+    }
+    </script>
+    <h5>Link to the video (part 2/2)</h5>
+    <p >Enter password: <input id='passwordW3_oh2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW3_oh2()">Enter</button>
+    <script>
+    function validatePassW3_oh2(){
+        if(document.getElementById('passwordW3_oh2').value == 'brav0'){
+            open('https://youtu.be/j9mEMKPr7io')
+            return true;
+        }else{
+            alert('wrong password!!');
+            return false;
+        }
+    }
+    </script>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+
+
+
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>No video (Forgot to click the recording button)</h5>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>Exercise P8.3.</h5> 
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Employee
+{
+public:
+  Employee();
+  Employee(string pname, double psalary);
+protected: // Inherited classes can use these member variables
+  string name;
+  double salary;
+};
+
+Employee::Employee():name(""), salary(0) {}
+Employee::Employee(string pname, double psalary):name(pname), salary(psalary) {}
+
+class Manager: public Employee
+{
+public:
+  Manager();
+  Manager(string pname, double psalary, string pdepartment);
+
+  void print() const; // accessor
+private:
+  string department;
+};
+
+Manager::Manager()
+:Employee() // base class constructor
+{
+  department = "";  
+}
+
+Manager::Manager(string pname, double psalary, string pdepartment)
+:Employee(pname, psalary) // base class constructor
+{
+  department = "";  
+}
+
+void Manager::print() const
+{
+  cout << "Name : " << name << " salary : " << salary << " department : " << department << endl;
+}
+
+class Executive: public Manager
+{
+public:
+  Executive();
+  Executive(string pname, double psalary, string pdepartment);
+
+  void print() const;
+};
+
+Executive::Executive()
+:Manager()
+{}
+
+Executive::Executive(string pname, double psalary, string pdepartment)
+:Manager(pname, psalary, pdepartment)
+{}
+
+void Executive::print() const{
+  // cout << "(Executive) Name : " << name << " salary : " << salary << " department : " << department << endl;
+
+  cout << "(Executive) ";
+  Manager::print();
+}
+
+int main()
+{
+  Executive e("John", 100, "PIC");
+
+  e.print(); // (Executive) Name : John salary : 100 department : PIC
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+  </div>
+
+
+
+</div>
+
+<div class=empty-row-1> </div>

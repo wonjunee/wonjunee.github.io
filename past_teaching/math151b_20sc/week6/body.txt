@@ -1,0 +1,146 @@
+<div class="container bg-3 text-left">
+    <h3>Week6</h3>  
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+    <h4>About HW5.</h4>
+
+<!-- ---------------------------- -->
+<h5>Link to the video (The second part of the discussion was not recorded (my mistake))</h5>
+<p >Enter password: <input id='passwordW6_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_1()">Enter</button>
+<script>
+function validatePassW6_1(){
+    if(document.getElementById('passwordW6_1').value == 'brav0'){
+        open('https://youtu.be/U8FmMEPO0-A')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>Disucssion Section Note.</h5>
+            <p><a href="https://github.com/wonjunee/math151b/raw/master/Hw5%202.pdf">Download</a></p>
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>Broyden's method Matlab and python code</h5>
+
+            <h5>Example 1 from the textbook page 651.</h5>
+
+            <pre class="prettyprint lang-matlab" style="font-size: 8.5pt;">
+%% Solving Example 1 from the texbook p651
+
+% initial guess
+x = [0.1,0.1,-0.1]';
+
+% Tolerance and maximum iterations
+TOL = 1e-6;
+N = 7;
+
+% Broyden's method
+A = J(x);
+v = F(x);
+
+A = inv(A);
+
+s = - A*v;
+x = x + s;
+k = 2;
+
+success = 0;
+
+while k <= N
+
+    w = v;
+    v = F(x);
+    y = v - w;
+    
+    z = -A*y;
+    
+    p = - s' * z;
+    
+    u = s' * A;
+    
+    tmp = (s + z) * u;
+    A = A + 1/p * tmp;
+    
+    s = - A*v;
+    
+    x = x + s;
+    
+    if norm(s) < TOL
+        success = 1;
+        break
+    end
+    k = k + 1;
+end
+
+if success == 1
+    fprintf("The procedure was successful.\n")
+else
+    fprintf("The procedure was unsuccessful.\n")
+end
+
+x
+
+
+function val = F(x)
+    val1 = 3 * x(1) - cos(x(2)*x(3)) - 1/2;
+    val2 = x(1)^2 - 81 * (x(2)+0.1)^2 + sin(x(3)) + 1.06;
+    val3 = exp(-x(1)*x(2)) + 20*x(3) + (10*pi - 3)/3;
+    val = [val1, val2, val3]';
+end
+
+function val = J(x)
+    val = [3                    , x(3) * sin(x(2)*x(3))    , x(2) * sin(x(2)*x(3));
+           2*x(1)               , -162 * (x(2) + 0.1)      , cos(x(3));
+           -x(2)*exp(-x(1)*x(2)), -x(1) * exp(-x(1)*x(2))  , 20];
+end
+            </pre>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>

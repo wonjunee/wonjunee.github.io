@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 10A - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Winter 2020</h3>
+    <h4>PIC 10A: Introduction to Programming</h4>
+    <h4>Discussion Section 3A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <li><a href="../week7/">Week 7</a></li>
+            <li><a href="../week8/">Week 8</a></li>
+            <li><a href="../week9/">Week 9</a></li>
+            <li><a href="../week10/">Week 10</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr>  <div class="container bg-3 text-left">
+    <h3>Week3</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5> Exercise P2.12.</h5> 
+    <p>Write a program that reads a number greater than or equal to 1,000
+from the user and prints it with a comma separating the thousands. Here is a sample
+dialog; the user input is in boldface:</p>
+    <br>
+
+    <p><i>Please enter an integer >= 1000: <b>23456</b></i></p>
+    <p><i>23,456</i></p>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream>
+
+using namespace std;
+
+int main(){
+
+  int n;
+  cout << "type a number greater or equal to 1000 : ";
+  cin >> n;
+
+  // Goal: define n1 = 23 and n2 = 455
+
+  int n1 = n / 1000; // 23455 / 1000 = 23.455 -> 23 because it is an integer vs. integer
+
+  int n2 = n % 1000; // 455
+
+//               2 3
+//  1000 | 2 3 4 5 5
+//  ________________
+//         2 3 4 5
+//         2 0 0 0
+//  ________________
+//           3 4 5 5
+//           3 0 0 0
+//    ________________
+//             4 5 5
+
+  // want to print out 23,455
+
+  cout << n1 << "," << n2 << endl;
+
+  return 0;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        
+<h5>Exercise P2.13.</h5> 
+<p>Write a program that reads a number between 1,000 and 999,999 from the user, where the user enters a comma in the input. Then print the number without a comma. Here is a sample dialog; the user input is in boldface:</p>
+<br>
+<p><i>Please enter an integer between 1,000 and 999,999: <b>23,456</b></i></p>
+<p><i>23456</i></p>
+<br>
+<p>Hint: Read the input as a string. Measure the length of the string. Suppose it contains n characters. Then extract substrings consisting of the first n – 4 characters and the last three characters.</p>
+<h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream>
+#include < string>
+
+using namespace std;
+
+int main(){
+
+  string n;
+  cout << "type a number between 1,000 and 999,999 : ";
+  cin >> n;
+
+  // suppose the input we get is 23,456
+  // n = "3,456"
+
+  int num_of_char = n.length(); // 6
+
+  string n1 = n.substr(num_of_char-3); // 456
+  string n2 = n.substr(0,num_of_char-4); // 23
+
+  cout << n1 << n2 << endl; // will print out 23456
+
+  return 0;
+}
+</pre>
+
+
+      </div>
+      <div class="col-sm-1"></div>
+
+
+    </div>
+
+</div>
+
+<div class=empty-row-1> </div>
+
+ <div class="container bg-3 text-left">
+    <h3>Thursday</h3>
+  </div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+            <h5> Exercise P3.1.</h5> 
+            <p>Write a program that prints all solutions to the quadratic equation $ax^2 + bx + c$. Read in a, b, c and use the quadratic formula. If the discriminant $b^2 - 4ac$ is negative, display a message stating that there are no solutions.</p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+  double a,b,c;
+
+  cout << "type a : ";
+  cin >> a;
+
+  cout << "type b : ";
+  cin >> b;
+
+  cout << "type c : ";
+  cin >> c;
+
+  // b^2 - 4ac
+  double discriminant = b*b - 4*a*c;
+
+  if(discriminant < 0){
+    cout << "no solution" << endl;
+  }
+  else if(discriminant == 0){
+    cout << "repeating roots" << endl;
+  }
+  else{
+    cout << "two distinct roots" << endl;
+  }
+
+}
+</pre>
+
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+  <div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+  <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+            <h5> Exercise P3.4. </h5> 
+              <p>Write a program that translates a letter grade into a number grade.
+          Letter grades are A, B, C, D, and F, possibly followed by + or –. Their numeric values are 4, 3, 2, 1, and 0. There is no F+ or F–. A + increases the numeric value by 0.3, a – decreases it by 0.3. However, an A+ has value 4.0.</p>
+          <span class="code-output">
+          <p><i>Enter a letter grade: <b>B-</b></i></p>
+          <p><i>The numeric value is 2.7.</i></p>
+          </span>
+          <h5>Solution 1</h5>
+ <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+int main(){
+
+  string grade;
+
+  cout << "Enter a letter grade: ";
+  cin >> grade;
+
+  if(grade == "A+"){
+    cout << 4 << endl;
+  }
+  else if(grade == "A"){
+    cout << 4 << endl;
+  }
+  else if(grade == "A-"){
+    cout << 3.7 << endl;
+  }
+  else if(grade == "B+"){
+    cout << 3.3 << endl;
+  }
+  else if(grade == "B"){
+    cout << 3 << endl;
+  }
+  else if(grade == "B-"){
+    cout << 2.7 << endl;
+  }
+  else if(grade == "C+"){
+    cout << 2.3 << endl;
+  }
+  else if(grade == "C"){
+    cout << 2 << endl;
+  }
+  else if(grade == "C-"){
+    cout << 1.7 << endl;
+  }
+  else if(grade == "D+"){
+    cout << 1.3 << endl;
+  }
+  else if(grade == "D"){
+    cout << 1 << endl;
+  }
+  else if(grade == "D-"){
+    cout << 0.7 << endl;
+  }
+  else if(grade == "F"){
+    cout << 0 << endl;
+  }
+  return 0;
+}
+</pre>
+
+          <h5>Solution 2</h5>
+
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+int main(){
+
+  string grade;
+
+  cout << "Type grade : ";
+  cin >> grade;
+
+  string alphabet = grade.substr(0,1);
+  double plus_minus = 0;
+
+  if( grade.length() == 2 ){
+
+    if( grade.subtr(1,1) == "+"){
+      plus_minus = 0.3;
+    }
+    else{ // "-" case
+      plus_minus = -0.3;
+    }
+  }
+
+  if( alphabet == "A" ){
+    cout << fmin(4,4 + plus_minus) << endl;
+  }
+  else if( alphabet == "B" ){
+    cout << 3 + plus_minus << endl;
+  }
+  else if( alphabet == "C" ){
+    cout << 2 + plus_minus << endl;
+  }
+  else if( alphabet == "D" ){
+    cout << 1 + plus_minus << endl;
+  }
+  else if( alphabet == "F" ){
+    cout << 0 << endl;
+  }
+  else{
+    cout << "Wrong Input!" <<endl;
+  }
+  
+  return 0;
+}
+</pre>
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+  <div class=empty-row-1> </div>
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

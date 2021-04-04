@@ -1,0 +1,567 @@
+  <div class="container bg-3 text-left">
+    <h3>Week6</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h5>About Recursion</h5> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW6_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_1()">Enter</button>
+<script>
+function validatePassW6_1(){
+    if(document.getElementById('passwordW6_1').value == 'brav0'){
+        open('https://youtu.be/dUawrrVDvlE')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.1</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+int factorial(int n){
+  if(n <= 0) return 1;
+  return factorial(n-1) * n;
+}
+
+int main(){
+  cout << factorial(3) << endl;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.2</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Sentence
+{
+public:
+  Sentence(string s):s(s) {}
+  void reverse();
+  string get_text() const;
+
+private:
+  string s;
+};
+
+void Sentence::reverse(){
+  if(s.length() <= 1){
+    return;
+  }
+
+  // fun("asdf") = "f" + fun("asd")
+
+  Sentence small_s(s.substr(0,s.length()-1));
+  small_s.reverse();
+
+  s = s[s.length()-1] + small_s.get_text(); // 'f' + "dsa" = "fdsa"
+}
+
+string Sentence::get_text() const{
+  return s;
+}
+
+int main(){
+  Sentence greeting("Hello world");
+  greeting.reverse();
+  cout << greeting.get_text() << endl; // expect "fdsa";
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.5</h5>
+    <h5>Solution</h5>
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+bool find(const string& word, const string& target){
+  if(word.length() < target.length()) return false;
+  if(word.substr(0,target.length()) == target) return true;
+
+  return find(word.substr(1), target);
+
+  // substr(starting index, number of letters)
+
+  // substr(starting index) -> take everything after the starting index
+  // word =asdfasdfasdfasdf
+  // word.substr(1) = sdfasdfasdfasdf
+}
+
+int main(){
+  bool b = find("asdf", "sd"); // expect "true"
+
+  cout << b << endl; // 1
+}
+    </pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>More About Recursion and Selection Sort</h5> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW6_2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_2()">Enter</button>
+<script>
+function validatePassW6_2(){
+    if(document.getElementById('passwordW6_2').value == 'brav0'){
+        open('https://youtu.be/74hBbaxiYn8')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.7</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+
+using namespace std;
+
+
+int maximum(vector< int > v){
+
+  if(v.size() == 1){
+    return v[0];
+  }
+
+  // if( last > rest )
+
+  int last = v[v.size()-1];
+  v.pop_back();
+
+  int rest = maximum(v);
+
+  if(last >= rest){
+    return last;
+  }else{
+    return rest;
+  }
+
+}
+
+int main(){
+  vector< int > v = {1,5,2,9,100,15,4,3};
+
+  cout << maximum(v) << endl; // 15
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.10</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+#include < string >
+
+using namespace std;
+
+vector< string > generate_substrings(string s){
+  vector< string > result;
+  if(s == ""){
+    result.push_back(s);
+    return result;
+  }
+
+  string first = s.substr(0,1);
+
+  
+
+  for(int i = 1; i <= s .size();++i){
+    result.push_back(s.substr(0,i));
+  }
+
+  vector< string > addition = generate_substrings(s.substr(1));
+
+  for(int i=0;i< addition .size();++i){
+    result.push_back(addition[i]);
+  }
+
+  return result;
+}
+
+int main(){
+  string s = "rum";
+
+  vector< string > gs = generate_substrings(s);
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.11</h5>
+    <h5>Solution</h5>
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+#include < string >
+
+using namespace std;
+
+vector< string > generate_substrings(string s){
+  vector< string > result;
+  if(s == ""){
+    result.push_back(s);
+    return result;
+  }
+
+  string first = s.substr(0,1);
+
+  vector< string > addition = generate_substrings(s.substr(1));
+
+  for(int i=0;i < addition.size();++i){
+    result.push_back(first+addition[i]);
+  }
+  for(int i=0;i < addition.size();++i){
+    result.push_back(addition[i]);
+  }
+  return result;
+
+
+}
+
+int main(){
+  string s = "rum";
+
+  vector< string > gs = generate_substrings(s);
+}
+    </pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Exercise P10.14</h5>
+    <h5>Solution</h5>
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+void hanoi(int from, int to, int newto, int n)
+{
+  if(n<=1)
+  {
+    cout << "Move disk from peg " << from << " to peg " << to << endl;
+    return;
+  }
+  
+  hanoi(from, newto, to, n-1);
+  cout << "Move disk from peg " << from << " to peg " << to << endl;
+  hanoi(newto, to, from, n-1);
+}
+
+void play(int n)
+{
+  return hanoi(0,2,1,n);
+}
+
+int main()
+{
+  play(2);
+}
+    </pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+
+
+<div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    
+    <h5>Selection Sort</h5>
+    <h5>Solution</h5>
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+void swap(int& a, int& b){
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+
+ing min_position(vector< int >& a, int from, int to){
+  int min_pos = from;
+
+  for(int i=from+1; i <= to; ++i){
+    if(a[i] < a[min_pos]){
+      min_pos = i;
+    }
+  }
+
+  return min_pos;
+}
+
+void selection_sort(vector< int >& a){
+
+  for(int i=0;i < a.size();++i){
+
+    int min_pos = min_position(a, i, a.size()-1);
+    if(min_pos != i){
+      swap(a[min_pos], a[i]);
+    }
+  }
+}
+
+int main(){
+  vector< int > a = {1, 5, 2, 3};
+
+  selection_sort(a);
+
+  for(int i=0; i < a.size(); ++i){
+    cout << a[i] << ", ";
+  }
+}
+    </pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+  <div class="container bg-3 text-left">
+    <h3>Midterm Review 1/2</h3> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW6_midterm' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_midterm()">Enter</button>
+<script>
+function validatePassW6_midterm(){
+    if(document.getElementById('passwordW6_midterm').value == 'brav0'){
+        open('https://youtu.be/__8DdVAglqI')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+<div class="container bg-3 text-left">
+  <h3>Midterm Review 2/2</h3> 
+  <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW6_midterm2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_midterm2()">Enter</button>
+<script>
+function validatePassW6_midterm2(){
+    if(document.getElementById('passwordW6_midterm2').value == 'brav0'){
+        open('https://youtu.be/89owQhXi1_8')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+
+<div class=empty-row-1> </div>
+
+
+<div class="container bg-3 text-left">
+  <h3>Midterm Review Extra</h3> 
+  <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW6_midterm_extra' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW6_midterm_extra()">Enter</button>
+<script>
+function validatePassW6_midterm_extra(){
+    if(document.getElementById('passwordW6_midterm_extra').value == 'brav0'){
+        open('https://youtu.be/o5WDBBr7Mvo')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+
+<div class=empty-row-1> </div>

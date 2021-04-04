@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Math 151B - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=matlab"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=matlab" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Spring 2020</h3>
+    <h4>Math 151B: Applied Numerical Methods</p>
+    <h4>Discussion Section 1A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <!-- <li><a href="../week7/">Week 7</a></li> -->
+            <!-- <li><a href="../week8/">Week 8</a></li> -->
+            <!-- <li><a href="../week9/">Week 9</a></li> -->
+            <!-- <li><a href="../week10/">Week 10</a></li> -->
+            <!-- <li><a href="../Extra_Office_Hours/">Extra Office Hours</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr>  <div class="container bg-3 text-left">
+    <h3>Week8</h3>  
+  </div>
+
+  
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h5>Problems related to sort algorithms</h5> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW8_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW8_1()">Enter</button>
+<script>
+function validatePassW8_1(){
+    if(document.getElementById('passwordW8_1').value == 'brav0'){
+        open('https://youtu.be/TCRzD9ILe9Q')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+
+  <div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+    
+    <h5>Exercise P11.2</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+#include < string >
+
+using namespace std;
+
+class Employee
+{
+public:
+  Employee(string name, double salary): name(name), salary(salary) {}
+  string get_name() const{
+    return name;
+  }
+  double get_salary() const{
+    return salary;
+  }
+private:
+  string name;
+  double salary;
+};
+
+ostream& operator<<(ostream& out, const Employee& value){
+  out << "[ Name : " << value.get_name() << " Salary : " << value.get_salary() << "]";
+  return out;
+}
+
+bool operator<(const Employee& left, const Employee& right){
+  if(left.get_salary() < right.get_salary()){
+    return true;
+  }
+  return false;
+}
+
+void swap(vector< Employee* >& v, int i, int j){
+  Employee* tmp = v[i];
+  v[i] = v[j];
+  v[j] = tmp;
+}
+
+void sort(vector< Employee* >& v){
+
+  int N = v.size();
+  Employee* p = nullptr;
+
+  for(int i=0;i < N;++i){
+    p = v[i];
+    int ind = i;
+    for(int j=i+1;j < N;++j){
+      if(*(v[j]) < *p){
+        p   = v[j];
+        ind = j;
+      }
+    }
+    swap(v,i,ind);
+  }
+}
+
+int main()
+{
+  vector< Employee* > v;
+  v.push_back(new Employee("John",1000));
+  v.push_back(new Employee("Ringo",2000));
+  v.push_back(new Employee("Paul",500));
+  v.push_back(new Employee("George",800));
+
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+
+  sort(v);
+
+  cout << "After sort" << endl;
+
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+  <div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+    
+    <h5>Exercise P11.4</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+#include < string >
+
+using namespace std;
+
+class Employee
+{
+public:
+  Employee(string name, double salary): name(name), salary(salary) {}
+  string get_name() const{
+    return name;
+  }
+  double get_salary() const{
+    return salary;
+  }
+private:
+  string name;
+  double salary;
+};
+
+ostream& operator<<(ostream& out, const Employee& value){
+  out << "[ Name : " << value.get_name() << " Salary : " << value.get_salary() << "]";
+  return out;
+}
+
+bool operator<(const Employee& left, const Employee& right){
+  if(left.get_salary() < right.get_salary()){
+    return true;
+  }
+  return false;
+}
+
+void merge(vector< Employee* >& v, int from, int mid, int to){
+
+  vector< Employee* > new_v;
+  int c1=from;
+  int c2=mid+1;
+
+  while(c1 <= mid && c2 <= to){
+    if(*v[c1] < *v[c2]){
+      new_v.push_back(v[c1]);
+      c1++;
+    }else{
+      new_v.push_back(v[c2]);
+      c2++;
+    }
+  }
+  if(c1 <= mid){
+    for(int i=c1; i<=mid;++i){
+      new_v.push_back(v[i]);
+    }
+  }else{
+    for(int i=c2; i<=to;++i){
+      new_v.push_back(v[i]);
+    } 
+  }
+  v = new_v;
+}
+
+void sort(vector< Employee* >& v, int from, int to){
+
+  if(from == to) return;
+
+  int mid  = (from+to)/2;
+
+  sort(v,from,mid);
+  sort(v,mid+1,to);
+
+  merge(v,from,mid,to);
+}
+
+int main()
+{
+  vector< Employee* > v;
+  v.push_back(new Employee("John",1000));
+  v.push_back(new Employee("Ringo",2000));
+  v.push_back(new Employee("Paul",500));
+  v.push_back(new Employee("George",800));
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+
+  // sort(v,0,v.size()-1);
+
+  sort(v.begin(), v.end(), myfun);
+
+  cout << "After sort" << endl;
+
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+  <div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+    
+    <h5>Exercise P11.10</h5>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+#include < string >
+#include < algorithm > // IMPORTANT
+
+using namespace std;
+
+class Employee
+{
+public:
+  Employee(string name, double salary): name(name), salary(salary) {}
+  string get_name() const{
+    return name;
+  }
+  double get_salary() const{
+    return salary;
+  }
+private:
+  string name;
+  double salary;
+};
+
+ostream& operator<<(ostream& out, const Employee& value){
+  out << "[ Name : " << value.get_name() << " Salary : " << value.get_salary() << "]";
+  return out;
+}
+
+bool operator<(const Employee& left, const Employee& right){
+  if(left.get_salary() < right.get_salary()){
+    return true;
+  }
+  return false;
+}
+
+bool myfun(Employee* left, Employee* right){
+  if(left->get_salary() < right->get_salary()){
+    return true;
+  }
+  return false;
+}
+
+int main()
+{
+  vector< Employee* > v;
+  v.push_back(new Employee("John",1000));
+  v.push_back(new Employee("Ringo",2000));
+  v.push_back(new Employee("Paul",500));
+  v.push_back(new Employee("George",800));
+
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+
+  sort(v.begin(),v.end(),myfun);
+
+  cout << "After sort" << endl;
+
+  for(int i=0;i < v.size();++i){
+    cout << *(v[i]) << " ";
+  }
+  cout << endl;
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+  
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>About HW5 and Linked List</h5> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW8_2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW8_2()">Enter</button>
+<script>
+function validatePassW8_2(){
+    if(document.getElementById('passwordW8_2').value == 'brav0'){
+        open('https://youtu.be/TIHUTWRITiw')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Math 151B - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=matlab"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=matlab" type="text/javascript"></script> -->
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Spring 2020</h3>
+    <h4>Math 151B: Applied Numerical Methods</p>
+    <h4>Discussion Section 1A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <!-- <li><a href="../week7/">Week 7</a></li> -->
+            <!-- <li><a href="../week8/">Week 8</a></li> -->
+            <!-- <li><a href="../week9/">Week 9</a></li> -->
+            <!-- <li><a href="../week10/">Week 10</a></li> -->
+            <!-- <li><a href="../Extra_Office_Hours/">Extra Office Hours</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr><div class="container bg-3 text-left">
+    <h3>Week4</h3>  
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+    <h4>About HW3.</h4>
+
+<!-- ---------------------------- -->
+<h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW4_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW4_1()">Enter</button>
+<script>
+function validatePassW4_1(){
+    if(document.getElementById('passwordW4_1').value == 'brav0'){
+        open('https://youtu.be/3XztqwhaK_I')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script> </div>
+
+<div class=empty-row-1> </div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>Disucssion Section Note.</h5>
+            <p><a href="https://github.com/wonjunee/math151b/raw/master/Hw3.pdf">Download</a></p>
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>RKF 45 Matlab code</h5>
+
+            <pre class="prettyprint lang-matlab" style="font-size: 8.5pt;">
+%% Parameters
+
+format longE;
+
+% define a function f
+f = @(t,y) y - t^2 + 1;
+
+% define endpoints
+a = 0;
+b = 2;
+
+% tolerance
+TOL = 1e-5;
+
+% maximum and minimum step sizes
+hmax = 0.25;
+hmin = 0.01;
+
+% initial condition
+alpha = 0.5;
+
+t = a;
+w = alpha;
+h = hmax;
+
+%% Running the code
+
+[t_arr, w_arr, w_hat_arr] = RKF45(f,t,w,h,b,TOL,hmax,hmin);
+
+summary = cat(2,t_arr,w_arr,w_hat_arr,1/h*abs(w_arr-w_hat_arr));
+% summary
+
+
+
+%% RKF45 Algorithm
+
+function [t_arr, w_arr, w_hat_arr] = RKF45(f,t,w,h,b,TOL,hmax,hmin)
+
+    % saving the data
+    t_arr = [t];
+    w_arr = [w];
+    w_hat_arr = [w];
+    
+    FLAG = 1;
+    
+    while FLAG == 1
+        k1 = h * f(t,w);
+        k2 = h * f(t+0.25*h, w+0.25*k1);
+        k3 = h * f(t+3/8*h, w+3/32*k1+9/32*k2);
+        k4 = h * f(t+12/13*h, w+1932/2197*k1-7200/2197*k2+7296/2197*k3);
+        k5 = h * f(t+h, w+439/216*k1-8*k2+3680/513*k3-845/4104*k4);
+        k6 = h * f(t+1/2*h, w-8/27*k1+2*k2-3544/2565*k3+1859/4104*k4-11/40*k5);
+        
+        % RK 4
+        w_val     = w + 25/216*k1 + 1408/2565*k3 + 2197/4104*k4 - 1/5*k5;
+        % RK 5
+        w_hat_val = w + 16/135*k1 + 6656/12825*k3 + 28561/56430*k4 - 9/50*k5 + 2/55*k6;
+        % Calculate R
+        R = 1/h * abs(w_val - w_hat_val);
+        
+        if R <= TOL
+            t = t+h;
+            w = w_val;
+            
+            t_arr = [t_arr; t];
+            w_arr = [w_arr; w];
+            w_hat_arr = [w_hat_arr; w_hat_val];
+            
+            fprintf("t : %f\tw : %e\tw_hat : %e\tR : %e \n",t,w,w_hat_val,R)
+        end
+        
+        delta = 0.84*(TOL/R)^(1/4);
+        if delta <= 0.1
+            h = 0.1*h;
+        elseif delta >= 4
+            h = 4*h;
+        else
+            h = delta * h;
+        end
+        
+        if h > hmax
+            h = hmax;
+        end
+        
+        if t >= b
+            FLAG = 0;
+        elseif t+h > b
+            h = b-t;
+        elseif h < hmin
+            FLAG = 0;
+            fprintf("minimum h exceeded")
+        end
+    end
+    fprintf("The number of time steps : %d\nSolution at t=%f : %f\n", length(t_arr), b, w)
+end
+            </pre>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

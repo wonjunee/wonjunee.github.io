@@ -1,0 +1,133 @@
+<div class="container bg-3 text-left">
+    <h3>Week2</h3>  
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+    <h4>About HW1 and definitions of local truncation error, consistency, convergency, and stability.</h4>
+
+<!-- ---------------------------- -->
+<h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW2_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW2_1()">Enter</button>
+<script>
+function validatePassW2_1(){
+    if(document.getElementById('passwordW2_1').value == 'brav0'){
+        open('https://youtu.be/YbvRsM0BGPY')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script> </div>
+
+<div class=empty-row-1> </div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>Disucssion Section Note.</h5>
+            <p><a href="https://github.com/wonjunee/math151b/raw/master/Hw1.pdf">Download</a></p>
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+
+            <h5>Matlab code for Question 3.</h5>
+
+            <pre class="prettyprint lang-matlab" style="font-size: 8.5pt;">
+T = 1; % terminal time
+
+% Euler's method
+
+subplot(2,1,1);
+t_arr = linspace(0,1,100);
+y_arr = exp(t_arr);
+plot(t_arr,y_arr,'LineWidth',2)
+legend("Exact")
+hold on;
+for j = 1:3
+    h = 2^(-j);
+    t_arr = linspace(0,T,floor(T/h)+1);
+    y_arr = linspace(0,T,floor(T/h)+1);
+    y_arr(1) = 1;
+    for i = 1:T/h
+        t = (i-1)*h;
+        y_arr(i+1) = y_arr(i) + h * (y_arr(i)^2 * exp(-t));
+    end
+    plot(t_arr,y_arr,'LineWidth',1)
+end
+title("Euler's method")
+hold off;
+
+% Taylor method of order 2
+
+subplot(2,1,2);
+t_arr = linspace(0,1,100);
+y_arr = exp(t_arr);
+plot(t_arr,y_arr,'LineWidth',2)
+legend("Exact")
+hold on;
+for j = 1:3
+    h = 2^(-j);
+    t_arr = linspace(0,T,floor(T/h)+1);
+    y_arr = linspace(0,T,floor(T/h)+1);
+    y_arr(1) = 1;
+    for i = 1:T/h
+        t = (i-1)*h;
+        y_arr(i+1) = y_arr(i) + h * (y_arr(i)^2 * exp(-t)) + h^2/2 * (2*y_arr(i)*exp(-t)*y_arr(i)^2*exp(-t) - y_arr(i)^2*exp(-t));
+    end
+    plot(t_arr,y_arr,'LineWidth',1)
+end
+title("Taylor's method order 2")
+hold off;
+            </pre>
+
+            <figure class="text-center">
+                  <img src="https://github.com/wonjunee/math151b/blob/master/q3.png?raw=true" alt="Trulli" style="max-width:100%">
+                  <figcaption>Euler's method vs. Taylor's method of order 2. data1: h=0.5, data2: h=0.25, data3: h=0.125.</figcaption>
+            </figure>
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->

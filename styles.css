@@ -1,0 +1,90 @@
+h1 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+h2 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+h4 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+h5 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+h6 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: bold;} 
+p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; } 
+li { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; } 
+
+tab1 { padding-left: 4em; }
+tab1 { padding-left: 8em; }
+
+.empty-row-1 {
+  padding-top: 1em;
+}
+.empty-row-2 {
+  padding-top: 2em;
+}
+.empty-row-3 {
+  padding-top: 3em;
+}
+.empty-row-4 {
+  padding-top: 4em;
+}
+
+.bottom-blank {
+  padding-bottom: 80px;
+}
+
+.bg-1 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+}
+
+.bg-2 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+}
+
+.bg-3 {
+    /* background-color: #ffffff; /* White */
+    background-color: #F5F5F5;
+    color: #555555;
+}
+
+.code-output {
+  color: #000080;
+  font-style: italic;
+}
+
+a:link {
+  text-decoration: none;
+  color: Blue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: Blue;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: Blue;
+}
+
+a:active {
+  text-decoration: underline;
+  color: Blue;
+}
+
+p.it {
+  font-style: italic;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    border-width: 2px;
+} 
+
+body {
+  background-color: #F5F5F5;
+}

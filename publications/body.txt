@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+    <div class="empty-row-4"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h3>Wonjun Lee</h3>
+                <%personal%>
+                <%office%>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Publications and Preprints</h4>
+                <ul>
+                    <li><a href="https://www.math.ucla.edu/~majaco/">M. Jacobs</a>, W. Lee, <a href="https://flavienleger.github.io">F. L&#233;ger</a> <b>The back-and-forth method for Wasserstein gradient flows</b>, Accepted in ESAIM: COCV, 2020. [<a href="https://arxiv.org/pdf/2011.08151">PDF</a>, <a href="https://wasserstein-gradient-flows.netlify.app">Code</a>]</li>
+                    <li>W. Lee, S. Liu, H. Tembine, W. Li, S. Osher, <b>Controlling Propagation of epidemics via mean-field games</b>, SIAM Journal on Applied Math, Dec, 2020. [<a href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games">PDF</a>]</li>
+                    <li>Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han, <b>Joint Task Assignment and Trajectory Optimization for a Mobile Robot Swarm by Mean-Field Game</b>, IEEE GLOBECOM 2020, Dec 7-11.</li>
+                    <li>H. Gao, W. Lee, W. Li, Z. Han, S. Osher, V. Poor, <b>Energy-efficient Velocity Control for Massive Rotary-Wing UAVs: A Mean Field Game Approach</b>, IEEE GLOBECOM 2020, Dec 7-11. [<a href="ftp://ftp.math.ucla.edu/pub/camreport/cam19-57.pdf">PDF</a>]</li>
+                    <li>W. Lee, <a href="http://homepages.rpi.edu/~lair/">R. Lai</a>, W, Li, S. Osher, <b>Generalized unnormalized optimal transport and its fast algorithms</b>, Journal of Computational Physics, Nov, 2020. [<a href="https://www.researchgate.net/publication/335134664_Fast_algorithms_For_Generalized_Unnormalized_Optimal_Transport">PDF</a>]</li>
+                    <li>W. Lee, <a href="https://people.math.sc.edu/wuchen/index.html">W. Li</a>, <a href="https://linbo.one">B. Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">A. Monod</a>, <b>Tropical Optimal Transport and Wasserstein Distances in Phylogenetic Tree Space</b>, submitted, Nov, 2019. [<a href="https://arxiv.org/pdf/1911.05401v1.pdf">PDF</a>, <a href="https://github.com/antheamonod/TropicalOT">Code</a>]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+
+    <div class="container bg-3 text-left">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-blank">
+    </div>
+</body>
+
+</html>                

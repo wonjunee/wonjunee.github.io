@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 10A - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Winter 2020</h3>
+    <h4>PIC 10A: Introduction to Programming</h4>
+    <h4>Discussion Section 3A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <li><a href="../week7/">Week 7</a></li>
+            <li><a href="../week8/">Week 8</a></li>
+            <li><a href="../week9/">Week 9</a></li>
+            <li><a href="../week10/">Week 10</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr><div class="container bg-3 text-left">
+    <h3>Week4</h3>  
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+</div>
+
+<div class="container bg-3 text-left">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5> Exercise P3.13. </h5> 
+            <p> Write a program that asks the user to enter a month (1 for January,
+            2 for February, and so on) and then prints the number of days in the month. For
+            February, print “28 or 29 days”.</p>
+            <span class="code-output">
+            <p><i>Enter a month: <b>5</b></i></p>
+            <p><i>30 days</i></p>
+            </span>
+
+            <h5>Solution</h5>
+
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+int main(){
+
+    int month;
+    cout << "Enter a month: " << endl;
+    cin >> month;
+
+    if(month == 2){
+        cout << "28 or 29 days" << endl;
+    }
+    else if(month == 4 || month == 6 || month == 9 || month == 11){
+        cout << "30 days" << endl;
+    } // if month is 1, 3, 5, 7, 8, 10, or 12
+    else{
+        cout << "31 days" << endl;
+    }
+
+}
+            </pre>  
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+<div class="container bg-3 text-left">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5> Exercise P3.3. </h5> 
+            <p> Write a program that reads in three ﬂoating-point numbers and prints the largest of the three inputs. For example:</p>
+
+            <span class="code-output">
+            <p><i>Please enter three numbers: <b>4 9 2.5 </b></i></p>
+            <p><i>The largest number is 9.</i></p>
+            </span>
+
+            <h5>Solution</h5>
+
+
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+
+#include < iostream >
+
+using namespace std;
+
+int main(){
+
+    /*
+        Given three numbers, find the largest
+    */
+
+    double n1,n2,n3;
+
+    cout << "Type three numbers: "<< endl;
+    cin >> n1 >> n2 >> n3;
+    double largest = 0;
+
+    if(n1 >= n2 && n1 >= n3){
+        largest = n1;
+    }
+    else if(n2 >= n1 && n2 >= n3){
+        largest = n2;
+    }
+    else{
+        largest = n3;
+    }
+
+    cout << "The largest is " << largest << endl;
+}
+            </pre>  
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+<div class="container bg-3 text-left">
+    <h3>Thursday</h3>
+</div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5> Calculating the sum </h5> 
+
+            <span class="code-output">
+            <p><i>Please enter a number : <b> 4 </b></i></p>
+            <p><i>The sum is 10.</i></p>
+            </span>
+
+            <h5>Solution</h5>
+
+
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+/*
+
+    Calculating the sum 1 + 2 + 3 + ... + N 
+    using a for loop.
+
+*/
+
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+
+    int num = 0;
+
+    cout << "Please enter a number : ";
+    cin  >> num;
+
+    int sum=0;
+
+    for(int i=1;i <= num;++i){
+        sum += i;
+    }
+
+    cout << "The sum is " << sum << "." << endl;
+
+    return 0;
+}
+            </pre>  
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+<div class="container bg-3 text-left">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5> Finding the max </h5> 
+
+            <span class="code-output">
+            <p><i>Please enter the number of scores : <b> 4 </b></i></p>
+            <p><i>Please enter score 1 : <b> 90 </b></i></p>
+            <p><i>Please enter score 2 : <b> 70 </b></i></p>
+            <p><i>Please enter score 3 : <b> 65 </b></i></p>
+            <p><i>Please enter score 4 : <b> 98 </b></i></p>
+            <p><i>The max is 98.</i></p>
+            </span>
+
+            <h5>Solution</h5>
+
+
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+/*
+
+    Finding the maximum using a for loop
+
+*/
+
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+    int num = 0;
+
+    cout << "Please enter the number of scores : ";
+    cin  >> num;
+
+    double max = 0;
+
+    for(int i = 0; i <= num; i++)
+    {
+        cout << "Please enter score " << i << " : ";
+
+        double score;
+        cin  >> score;
+
+        if(score > max)
+        {
+            max = score;
+        }
+    }
+
+    cout << "The max is " << max << "." << endl;
+
+    return 0;
+}
+            </pre>  
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+<div class="container bg-3 text-left">
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5> Exercise P3.21. </h5> 
+            <p> Exercise P3.21. Prime numbers. Write a program that prompts the user for an integer and then prints out all prime numbers up to that integer. For example, when the user enters 20, the program should print</p>
+
+            <span class="code-output">
+                <p class="it">2</p>
+                <p class="it">3</p>
+                <p class="it">5</p>
+                <p class="it">7</p>
+                <p class="it">11</p>
+                <p class="it">13</p>
+                <p class="it">17</p>
+                <p class="it">19</p>
+            </span>
+
+            <p>Recall that a number is a prime number if it is not divisible by any number except 1 and itself.</p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+int main(){
+
+    cout << "Type a number : ";
+    int num;
+    cin >> num;
+
+    for(int i = 2; i <= num; i++)
+    {
+        bool prime = true;
+        for(int j = 2; j < i; j++)
+        {
+            if(i%j==0)
+            {
+                prime = false;
+                break;
+            }
+        }
+        if(prime)
+        {
+            cout << i << endl;
+        }
+    }
+
+    return 0;
+
+}            
+            </pre>  
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> 
+</div>
+
+
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

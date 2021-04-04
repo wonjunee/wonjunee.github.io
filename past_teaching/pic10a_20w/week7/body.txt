@@ -1,0 +1,143 @@
+  <div class="container bg-3 text-left">
+    <h3>Week7</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+  </div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+            <h5>Exercise P4.2. </h5> 
+
+            <p>Write a procedure void sort2(int& a, int& b) that swaps the values of a and b if a is greater than b and otherwise leaves a and b unchanged. For example,</p>
+
+            <span class="code-output">
+                <p><i>int u = 2;</i></p> 
+                <p><i>int v = 3;</i></p> 
+                <p><i>int w = 4;</i></p> 
+                <p><i>int x = 1;</i></p> 
+                <p><i>sort2(u, v); // u is still 2, v is still 3</i></p> 
+                <p><i>sort2(w, x); // w is now 1, x is now 4</i></p>
+            </span>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+void sort2(int& a, int& b)
+{
+  if(a>b)
+  {
+    int tmp = a;
+    a = b;
+    b = tmp;  
+  }
+}
+
+int main()
+{
+  int u = 2;
+  int v = 3;
+  int w = 4;
+  int x = 1;
+  sort2(u,v);
+  sort2(w,x);
+
+  cout << "u : " << u << endl;
+  cout << "v : " << v << endl;
+  cout << "w : " << w << endl;
+  cout << "x : " << x << endl;
+}
+</pre>
+
+
+
+      </div>
+
+      <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+ <div class="container bg-3 text-left">
+    <h3>Thursday</h3>
+  </div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+            <h5>Exercise P4.2. </h5> 
+
+            <p>Write a procedure <i>sort3(int& a, int& b, int& c)</i> that swaps its three inputs to arrange them in sorted order.</p> 
+            <p>For example,</p>
+
+            <span class="code-output">
+                <p><i>int v = 3;</i></p> 
+                <p><i>int w = 4;</i></p> 
+                <p><i>int x = 1;</i></p> 
+                <p><i>sort3(v, w, x); // v is now 1, w is now 3, x is now 4</i></p> 
+            </span>
+
+            <p>Hint: Use sort2 of Exercise P4.2.</p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+void sort2(int& a, int& b)
+{
+  if(a>b)
+  {
+    int tmp = a;
+    a = b;
+    b = tmp;  
+  }
+}
+
+void sort3(int& a, int& b, int& c)
+{
+  sort2(b,c);
+  sort2(a,c);
+  sort2(a,b);
+}
+
+int main()
+{
+  int v = 3;
+  int w = 4;
+  int x = 1;
+  sort3(v, w, x);
+  
+  cout << "v : " << v << endl;
+  cout << "w : " << w << endl;
+  cout << "x : " << x << endl;
+}
+</pre>
+
+
+
+      </div>
+
+      <div class="col-sm-1"></div>
+    </div>
+</div>
+
+
+<div class=empty-row-1> </div>

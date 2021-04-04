@@ -1,0 +1,313 @@
+  <div class="container bg-3 text-left">
+    <h3>Week4</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW4_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW4_1()">Enter</button>
+<script>
+function validatePassW4_1(){
+    if(document.getElementById('passwordW4_1').value == 'brav0'){
+        open('https://youtu.be/aiZS1iPmwmk')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>About Polymorphism</h5> 
+    <br>
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+#include < vector >
+
+using namespace std;
+
+class Person{
+public:
+    Person();
+    Person(string pname, string pdob);
+    virtual void print() const;
+protected:
+    string name;
+    string dob;
+};
+
+
+class Employee: public Person{
+public:
+    Employee();
+    Employee(string pname, string pdob, double psalary);
+    virtual void print() const;
+protected:
+    double salary;
+};
+
+
+class Executive: public Employee{
+public:
+    Executive();
+    Executive(string pname, string pdob, double psalary, string pdepartment);
+    virtual void print() const;
+private:
+    string department;
+};
+
+
+Person::Person(): name(""), dob("") {}
+Person::Person(string pname, string pdob): name(pname), dob(pdob) {}
+
+void Person::print() const{
+    cout << "name : " << name << " dob : " << dob << endl;
+}
+
+Employee::Employee(): Person()
+{
+    salary = 0;
+}
+Employee::Employee(string pname, string pdob, double psalary): Person(pname, pdob)
+{
+    salary = psalary;
+}
+void Employee::print() const{
+    cout << "name : " << name << " dob : " << dob << " salary : " << salary << endl;
+}
+
+Executive::Executive(): Employee()
+{
+    department = "";
+}
+Executive::Executive(string pname, string pdob, double psalary, string pdepartment): Employee(pname, pdob, psalary)
+{
+    department = pdepartment;
+}
+void Executive::print() const{
+    cout << "name : " << name << " dob : " << dob << " salary : " << salary << " department : " << department << endl;
+}
+
+int main()
+{
+    vector< Person* > v;
+
+    v.push_back(new Person("John", "1111"));
+    v.push_back(new Employee("Paul", "2222", 100));
+    v.push_back(new Executive("George", "3333", 200, "PIC"));
+
+    v[0]->print();
+    v[1]->print();
+    v[2]->print();
+
+    for(int i=0;i<3;++i){
+        delete v[i];
+    }
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+
+
+
+</div>
+
+<div class=empty-row-1> </div>
+
+
+<div class="container bg-3 text-left">
+    <h3>Office Hours</h3> 
+    <h5>Link to the video</h5>
+    <p >Enter password: <input id='passwordW4_oh' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW4_oh()">Enter</button>
+    <script>
+    function validatePassW4_oh(){
+        if(document.getElementById('passwordW4_oh').value == 'brav0'){
+            open('https://youtu.be/wcq8NMMCTdc')
+            return true;
+        }else{
+            alert('wrong password!!');
+            return false;
+        }
+    }
+    </script>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW4_2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW4_2()">Enter</button>
+<script>
+function validatePassW4_2(){
+    if(document.getElementById('passwordW4_2').value == 'brav0'){
+        open('https://youtu.be/Rz990bzo-7E')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>About fstream</h5> 
+    <br>
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < fstream >
+#include < string >
+
+using namespace std;
+
+int count_characters(ifstream& infile){ // include spaces
+    int count = 0;
+    char x;
+
+    while(infile.get(x)){
+        count++;
+    }
+
+    infile.clear();
+    infile.seekg(0, ios::beg);
+
+    return count;
+}
+
+int count_words(ifstream& infile){
+    int count = 0;
+    string s;
+
+    while(infile >> s){
+        count ++;
+    }
+
+    infile.clear();
+    infile.seekg(0, ios::beg);
+
+    return count;
+}
+
+int count_lines(ifstream& infile){
+    int count = 0;
+    string s;
+    while(getline(infile,s)){
+        count++;
+    }
+
+    infile.clear();
+    infile.seekg(0, ios::beg);
+
+    return count;
+}
+
+int main()
+{
+    ifstream infile; // ifstream if you are reading the file
+    while(true)
+    {
+        string filename;
+        cout << "File name (Q to quit) : ";
+        getline(cin, filename);
+
+        if(cin.fail()){
+            cout << "Wrong file name" << endl;
+            return 0;
+        }
+
+        if(filename == "Q"){
+            return 0;
+        }
+
+        infile.open(filename.c_str());
+    
+        if(infile.fail()){
+            cout << "Wrong file" << endl;
+            return 0;
+        }
+
+        infile.clear();
+
+        int num_lines = count_lines(infile);
+        int num_characters = count_characters(infile);
+        int num_words = count_words(infile);
+        
+        ofstream outfile;
+        outfile.open("output.txt");
+        
+        outfile << "HEFLELFLLA LHAHAHHAHHA" << endl;
+        outfile << "num of char  : " << num_characters << endl;
+        outfile << "num of words : " << num_words << endl;
+        outfile << "num of lines : " << num_lines << endl;
+
+        outfile.close();
+    }
+    infile.close();
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<div class=empty-row-1> </div>
+
+
+<div class="container bg-3 text-left">
+    <h3>Extra Office Hours</h3> 
+    <h5>Link to the video</h5>
+    <p >Enter password: <input id='passwordW4_extra_oh' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW4_extra_oh()">Enter</button>
+    <script>
+    function validatePassW4_extra_oh(){
+        if(document.getElementById('passwordW4_extra_oh').value == 'brav0'){
+            open('https://youtu.be/F8uBHDoZNJ0')
+            return true;
+        }else{
+            alert('wrong password!!');
+            return false;
+        }
+    }
+    </script>
+</div>
+
+<div class=empty-row-1> </div>

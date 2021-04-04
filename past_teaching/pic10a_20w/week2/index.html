@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 10A - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Winter 2020</h3>
+    <h4>PIC 10A: Introduction to Programming</h4>
+    <h4>Discussion Section 3A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <li><a href="../week7/">Week 7</a></li>
+            <li><a href="../week8/">Week 8</a></li>
+            <li><a href="../week9/">Week 9</a></li>
+            <li><a href="../week10/">Week 10</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr>  <div class="container bg-3 text-left">
+    <h3>Week2</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h4>Tuesday</h4>
+    <h5> Problems From The Textbook</h5>
+    <p> <b>Exercise P2.3.</b> Write a program that prompts the user for two integers and then prints</p>
+    <ul>
+      <li>The sum </li>
+      <li>The difference </li>
+      <li>The product </li>
+      <li>The average </li>
+      <li>The distance (absolute value of the difference) </li>
+    </ul>
+
+    <h5>Solution</h5>
+    
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < cmath > // for math
+
+using namespace std;
+
+int main()
+{
+  int num1;
+  int num2;
+
+  cout<< "Please type the first number : ";
+  cin >>num1;
+  cout<< "Please type the second number : ";
+  cin >>num2;
+
+  int sum = num1 + num2;
+  int difference = num1 - num2;
+  int product = num1*num2;
+  double average = (num1 + num2)/2.0;
+  int distance = fabs(difference); // or int distance = fabs(num1 - num2);
+
+  // for example fabs(-13) = 13 fabs(13) = 13
+
+  cout << "sum = \"" << sum << "\"" << endl;
+  cout << "differnce = \"" << difference << "\"" << endl;
+  cout << "product = \"" << product<< "\"" << endl;
+  cout << "average = \"" << average << "\"" << endl;
+  cout << "distance = \"" << distance << "\"" << endl;
+
+  return 0;
+}
+    </pre>
+
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <p> <b>Exercise P2.6.</b> Write a program that asks the user for the lengths of the sides of a rectangle. Then print</p>
+    <ul>
+      <li> The area and perimeter of the rectangle </li>
+      <li> The length of the diagonal (use the Pythagorean theorem) </li>
+    </ul>
+
+    <h5>Solution</h5>
+
+    <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < cmath >
+
+using namespace std;
+
+int main()
+{
+  double width, height;
+
+  cout << "Please type width of a rectangle : ";
+  cin  >> width;
+
+  cout << "Please type height of a rectangle : ";
+  cin  >> height;
+
+  double area = width * height;
+  double perimeter = 2 * width + 2 * height;
+  // or
+  // double perimeter = 2 * (width + height);
+
+  double diagonal = sqrt(width*width + height*height);
+
+  // or
+  // double diagonal = sqrt( pow(width,2) + pow(height,2) );
+
+  cout << "area = " << area << endl;
+  cout << "perimeter = " << perimeter << endl;
+  cout << "diagonal = " << diagonal << endl;
+
+  return 0;
+
+}
+    </pre>
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h4>Thursday</h4>
+    <h5>Prefix and Postfix</h5>
+
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+int main()
+{
+  int i = 0;
+
+  int j = ++i; // add 1 -> i = 1, assign j = i = 1
+  int k = i++; // assign k = i = 1, add1 -> i = 2
+
+  int z = ++i + j++ + ++k; 
+  // 1. add values to i and k -> i=3, k=2
+  // 2. assign value to z -> z = i + j + k = 3 + 1 + 2 = 6
+  // 3. add value to j -> j=2
+
+  cout << "i=" << i << endl; //i=2 -> i=3
+  cout << "j=" << j << endl; //j=1 -> j=2
+  cout << "k=" << k << endl; //k=1 -> k=2
+  cout << "z=" << z << endl; //z=2
+
+  return 0;
+}
+    </pre>
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h5>Substring</h5>
+
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string > // You need to include this library to use substr member function.
+
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    string s = "hello world";
+
+    cout << s << endl;
+
+    /*
+
+    s.substr(a, b)
+
+    a: index where you want to start from
+    b: the number of letters you are going to take
+
+    */
+
+    cout << s.substr(7 , 3) << endl; // This wil print out "orl"
+
+    return 0;
+}
+    </pre>
+
+  </div>
+
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h5>More about Substring</h5>
+
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+/*
+
+Example of using substr member function.
+
+*/
+
+#include< iostream >
+#include< string >
+
+using namespace std;
+
+int main()
+{
+    string a = "hello world!\n";
+
+    cout << a.substr(0,5) << endl; // "hello"
+
+    cout << a.substr(2,2) << endl; // "ll"
+
+    cout << a.substr(7,444) << endl; // "orld!\n"
+
+    cout << a.substr(7) << endl; // "orld!\n"
+}
+    </pre>
+
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h5>Exercise P2.15 from the textbook</h5>
+
+    <p>Write a program that reads in an integer and breaks it into a sequence of individual digits. For example, the input 16384 is displayed as</p>
+    <br>
+    <p>1 6 3 8 4</p>
+    <br>
+    <p>You may assume that the input has no more than five digits and is not negative.</p>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+int main()
+{
+  int num;
+
+  cout << "Please type something : ";
+  cin  >> num;
+
+  string num_string = to_string(num);
+
+  num_string = num_string + "     ";  
+
+  cout << "num_string : " << num_string << endl;
+
+    cout << num_string.substr(0,1) << " " << num_string.substr(1,1) 
+  << " " << num_string.substr(2,1) << " " << num_string.substr(3,1) 
+  << " " << num_string.substr(4,1) << endl;
+
+  return 0;
+}
+</pre>
+
+  </div>
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

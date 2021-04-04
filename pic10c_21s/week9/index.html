@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 10A - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Spring 2021</h3>
+    <h4>PIC 10C: Advanced Programming</h4>
+    <h4>Discussion Section 1A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <!-- <li><a href="../week2/">Week 2</a></li> -->
+            <!-- <li><a href="../week3/">Week 3</a></li> -->
+            <!-- <li><a href="../week4/">Week 4</a></li> -->
+            <!-- <li><a href="../week5/">Week 5</a></li> -->
+            <!-- <li><a href="../week6/">Week 6</a></li> -->
+            <!-- <li><a href="../week7/">Week 7</a></li> -->
+            <!-- <li><a href="../week8/">Week 8</a></li> -->
+            <!-- <li><a href="../week9/">Week 9</a></li> -->
+            <!-- <li><a href="../week10/">Week 10</a></li> -->
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr><div class="container bg-3 text-left">
+    <h3>Week9</h3>  
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday and Thursday</h3>
+    <h4>Many problems related to vector</h4>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P6.1. </h5> 
+
+            <p> Write a function</p>
+
+            <p><i>double scalar_product(vector< double > a, vector< double > b)</i></p>
+
+            <p>that computes the scalar product of two vectors. The scalar product is</p>
+
+            <p><i>a0 b0 + a1 b1 + ... + an-1 bn−1</i></p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+
+using namespace std;
+
+double scalar_product(vector< double > a, vector< double > b)
+{
+  double sum = 0;
+  for(int i = 0; i < a.size(); ++i)
+  {
+    sum += a[i] * b[i];
+  }
+  return sum;
+}
+
+int main()
+{
+  vector< double > a = {1, 2, 3};
+  vector< double > b = {2, 1, -1};
+
+  double answer = scalar_product(a,b);
+
+  cout << answer << endl; // Expect to print out 1
+}
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P6.2. </h5> 
+
+            <p> Write a function that computes the alternating sum of all elements in a vector. For example, if alternating_sum is called with a vector containing </p>
+
+            <p><i>1 4 9 16 9 7 4 9 11</i></p>
+
+            <p> then it computes </p>
+
+            <p><i>1 − 4 + 9 − 16 + 9 − 7 + 4 − 9 + 11 = −2</i></p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+
+using namespace std;
+
+int alternating_sum(vector< int > a)
+{
+  int sum = 0;
+  for(int i = 0; i < a.size(); ++i)
+  {
+    sum += pow(-1,i) * a[i];
+  }
+  return sum;
+}
+
+int main()
+{
+  vector< int > a = {1,4,9,16,9,7,4,9,11};
+
+  int answer = alternating_sum(a);
+
+  cout << answer << endl; // Expect to print out -2
+}
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P6.3. </h5> 
+
+            <p> Write a procedure reverse that reverses the sequence of elements in a vector. For example, if reverse is called with a vector containing </p>
+
+            <p><i>1 4 9 16 9 7 4 9 11</i></p>
+
+            <p> then the vector is changed to </p>
+
+            <p><i>11 9 4 7 9 16 9 4 1</i></p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+
+using namespace std;
+
+void reverse(vector< int >&  a) // Important : I am using passing by reference here.
+{
+  for(int i = 0; i < a.size()/2; ++i)
+  {
+    int tmp = a[i];
+    a[i] = a[a.size() - i];
+    a[a.size() - i] = tmp;
+  }
+}
+
+int main()
+{
+  vector< int > a = {1,4,9,16,9,7,4,9,11};
+
+  reverse(a);
+
+  for(int i = 0; i < a.size(); ++i){
+    cout << a[i] << ", ";
+  }
+  cout << endl;
+}
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P6.4. </h5> 
+
+            <p> Write a function </p>
+
+            <p><i> vector< int > append(vector< int > a, vector< int > b)</i></p>
+
+            <p>that appends one vector after another. For example, if a is </p>
+
+            <p><i>1 4 9 16</i></p>
+
+            <p> and <i>b</i> is </p>
+
+            <p><i>9 7 4 9 11</i></p>
+
+            <p> then append returns the vector </p>
+
+            <p><i>1 4 9 16 9 7 4 9 11</i></p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < vector >
+
+using namespace std;
+
+vector< int > append(const vector< int >&  a, const vector< int >&  b)
+{
+  // Create a new vector c (which is empty when initialized)
+  vector < int > c;
+
+  // push back all of items in a
+  for(int i=0; i < a.size(); ++i)
+  {
+    c.push_back(a[i]);
+  }
+
+  // push back all of items in b
+  for(int i=0; i < b.size(); ++i)
+  {
+    c.push_back(b[i]);
+  }
+
+  return b
+}
+
+int main()
+{
+  vector< int > a = {1,4,9,16};
+  vector< int > b = {9,7,4,9,11};
+
+  vector< int > c = append(a, b);
+
+  for(int i = 0; i < a.size(); ++i){
+    cout << c[i] << ", ";
+  }
+  cout << endl;
+}
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

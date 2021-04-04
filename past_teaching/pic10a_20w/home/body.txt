@@ -1,0 +1,30 @@
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">  
+    <h4>Course Description</h4>
+    <p><a href="https://www.math.ucla.edu/ugrad/courses/pic/10A">https://www.math.ucla.edu/ugrad/courses/pic/10A</a></p>
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+
+    <h4>3A </h4>
+    <p>Tue/Thur 1:00pm-1:50pm <b>MS 5118</b></p>
+
+  </div>
+
+  <div class=empty-row-1> </div>
+  
+  <div class="container bg-3 text-left">  
+    <h4>Office Hours</h4>
+    <%officehours%>
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h4>Email</h4>
+    <p>wlee10 at ucla.edu</p>
+  </div>

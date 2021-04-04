@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 10B - Discussion Section - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 text-left">
+    <h3>Spring 2020</h3>
+    <h4>PIC 10B: Intermediate Programming</p>
+    <h4>Discussion Section 2A</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+
+  </div>
+
+  <hr>
+    <div class="container">
+      <ul class="nav nav-stacked">
+        <li><a href="../home/"><b>Home</b></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Week<span class="caret"></b></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../week1/">Week 1</a></li>
+            <li><a href="../week2/">Week 2</a></li>
+            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week4/">Week 4</a></li>
+            <li><a href="../week5/">Week 5</a></li>
+            <li><a href="../week6/">Week 6</a></li>
+            <li><a href="../week7/">Week 7</a></li>
+            <li><a href="../week8/">Week 8</a></li>
+            <li><a href="../week9/">Week 9</a></li>
+            <li><a href="../week10/">Week 10</a></li>
+            <li><a href="../Extra_Office_Hours/">Extra Office Hours</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <hr>  <div class="container bg-3 text-left">
+    <h3>Week5</h3>  
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h5>Link to the video</h5>
+<!-- <p >Enter password: <input id='password' type='text'  /> <a href="math.ucla.edu/~wlee" onclick="javascript:return validatePass()">Enter</a> </p> <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button> -->
+<p >Enter password: <input id='passwordW5_1' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW5_1()">Enter</button>
+<script>
+function validatePassW5_1(){
+    if(document.getElementById('passwordW5_1').value == 'brav0'){
+        open('https://youtu.be/bcg7Lb941Eo')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>About Polymorphism</h5> 
+    <br>
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+
+using namespace std;
+
+class FunnyClass
+{
+public:
+  FunnyClass();
+  FunnyClass(double a, double b, double c);
+
+  double get_a() const;
+  double get_b() const;
+  double get_c() const;
+
+  FunnyClass& operator+=(const FunnyClass& right);
+  FunnyClass& operator++(); // ++ a prefix
+  FunnyClass  operator++(int unused); // a ++ postfix
+
+  void print() const{
+    cout << "(" << a << ", " << b << ", " << c << ")";
+  }
+
+  double compare(const FunnyClass& right) const{
+    double leftvalue  = a*b - c;
+    double rightvalue = right.get_a() * right.get_b() - right.get_c();
+
+    return leftvalue - rightvalue;
+  }
+
+  // TODO: Finish overloading the rest of the operators
+  // FunnyClass& operator-=( ... );
+  // FunnyClass& operator--();
+  // FunnyClass& operator--(int ... );
+private:
+  double a;
+  double b;
+  double c;
+};
+
+// b = (1,2,3) c = (2,3,4)
+// a = left + right = (3,5,7)
+FunnyClass operator+(const FunnyClass& left, const FunnyClass& right){
+  FunnyClass result(left.get_a() + right.get_b(), left.get_b() + right.get_b(), left.get_c() + right.get_c());
+  return result;
+}
+
+// left  = (1,2,3)
+// right = (2,3,4)
+// -1 > 2
+bool operator>(const FunnyClass& left, const FunnyClass& right){
+  double value = left.compare(right);
+  if(value > 0) return true;
+  return false;
+}
+bool operator>=(const FunnyClass& left, const FunnyClass& right){
+  double value = left.compare(right);
+  if(value >= 0) return true;
+  return false;
+}
+
+bool operator<(const FunnyClass& left, const FunnyClass& right){
+  double value = left.compare(right);
+  if(value < 0) return true;
+  return false;
+}
+
+bool operator<=(const FunnyClass& left, const FunnyClass& right){
+  double value = left.compare(right);
+  if(value <= 0) return true;
+  return false;
+}
+
+FunnyClass::FunnyClass(): a(0), b(0), c(0) {}
+FunnyClass::FunnyClass(double a, double b, double c): a(a), b(b), c(c) {}
+
+double FunnyClass::get_a() const{
+  return this->a;
+}
+double FunnyClass::get_b() const{
+  return this->b;
+}
+double FunnyClass::get_c() const{
+  return this->c;
+}
+
+FunnyClass& FunnyClass::operator+=(const FunnyClass& right){
+  a += right.a;
+  b += right.b;
+  c += right.c;
+  return *this;
+}
+
+// prefix ++a;
+FunnyClass& FunnyClass::operator++(){
+  ++a;
+  ++b;
+  ++c;
+  return *this;
+}
+
+// postfix a++;
+FunnyClass FunnyClass::operator++(int unused){
+  FunnyClass clone(a,b,c);
+  ++a;
+  ++b;
+  ++c;
+  return clone;
+}
+
+ostream& operator<<(ostream& out, const FunnyClass& value){
+  out << "(" << value.get_a() << ", " << value.get_b() << ", " << value.get_c() << ")";
+  return out;
+}
+
+int main(){
+  FunnyClass n1(1,2,3); // -1
+  FunnyClass n2(2,3,4); // 2
+
+  cout << ++n1 << endl;
+
+  cout << n1 << endl;
+
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+
+
+
+</div>
+
+<div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW5_2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW5_2()">Enter</button>
+<script>
+function validatePassW5_2(){
+    if(document.getElementById('passwordW5_2').value == 'brav0'){
+        open('https://youtu.be/FNd-NgyJFxI')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+  <div class="container bg-3 text-left">
+
+
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+         
+    <h5>About Streams</h5>
+
+    <h5>Chapter 9 Exercise 6</h5>
+    <img src="https://raw.githubusercontent.com/wonjunee/pic10b/master/p9-6-1.png" alt="formula random" width="304" height="228">
+    <img src="https://raw.githubusercontent.com/wonjunee/pic10b/master/p9-6-2.png" alt="formula random" width="304" height="228">
+    <br>
+      <p><a href="database.txt">database.txt</a></p>
+      <p><a href="template.txt">template.txt</a></p>
+
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < fstream >
+#include < vector >
+#include < string >
+
+using namespace std;
+
+
+void save_template(const vector< string >& linevector){
+  ifstream tempfile;
+  tempfile.open("template.txt");
+  if(tempfile.fail()){
+    cout << "FAIL TO OPEN" << endl;
+  }
+
+  string doc = "";
+
+  char x;
+  bool first_bar = false;
+
+  while(tempfile.get(x)){
+    if(x == '|' && first_bar == false){
+      first_bar = true;
+    }else if(x == '|' && first_bar == true){
+      first_bar = false;
+    }else if(x != '|' && first_bar == true){
+      // replace by the linevector
+      int ind = (int) x - '0'; // this only works for single digit
+      doc += linevector[ind-1];
+    }else{
+      doc += x;
+    }
+  }
+
+  tempfile.close()
+
+  ofstream outfile;
+  outfile.open("JUNK " + linevector[1] + ".txt");
+
+  outfile << doc;
+  outfile.close();
+}
+
+void run_database(ifstream& infile){
+  string line;
+
+  while(getline(infile, line)){
+
+    // line = "Mr.|Harry|Hacker|1105 Torre Ave.|Cupertino|CA|95014 "
+
+    vector< string > linevector;
+
+    while(line.find("|") != string::npos){ // if you cannot find "|", then stop the while loop
+      linevector.push_back(line.substr(0, line.find("|"))); // Mr.
+      line = line.substr(line.find("|")+1); 
+    }
+    linevector.push_back(line);
+    // linevector = {"Mr.", "Harry", ... }
+
+    save_template(linevector);
+  }
+
+}
+
+int main(){
+
+  ifstream infile;
+  infile.open("database.txt");
+
+  if(infile.fail()){
+    cout << "FAIL to open" << endl;
+    return 1;
+  }
+
+  run_database(infile);
+
+  infile.close();
+}
+</pre>
+
+
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<div class=empty-row-1> </div>
+
+
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>

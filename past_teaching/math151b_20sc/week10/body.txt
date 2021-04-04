@@ -1,0 +1,217 @@
+  <div class="container bg-3 text-left">
+    <h3>Week10</h3>  
+  </div>
+
+  
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+  <div class="container bg-3 text-left">
+    <h3>Tuesday</h3> 
+    <h4>About HW6</h4> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW10_11' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW10_11()">Enter</button>
+<script>
+function validatePassW10_11(){
+    if(document.getElementById('passwordW10_11').value == 'brav0'){
+        open('https://youtu.be/g48R2jq1MZ8')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+
+  <div class="container bg-3 text-left">
+    <h4>Correction to the discussion section at the end</h4> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW10_12' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW10_12()">Enter</button>
+<script>
+function validatePassW10_12(){
+    if(document.getElementById('passwordW10_12').value == 'brav0'){
+        open('https://youtu.be/CShPtpnNrnY')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+
+  <div class="container bg-3 text-left">
+    <h3>Thursday</h3> 
+    <h5>Binary Search Tree</h5> 
+    <h5>Link to the video</h5>
+<p >Enter password: <input id='passwordW10_2' type='text'  /> <button type="button" class="btn btn-primary" onclick="javascript:return validatePassW10_2()">Enter</button>
+<script>
+function validatePassW10_2(){
+    if(document.getElementById('passwordW10_2').value == 'brav0'){
+        open('https://youtu.be/pWUkHx0dL3s')
+        return true;
+    }else{
+        alert('wrong password!!');
+        return false;
+    }
+}
+</script>
+  </div> 
+
+
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-10">
+    <h4>Exercise P12.6.</h4>
+    <h5>Solution</h5>
+<pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream>
+
+using namespace std;
+
+class TreeNode {
+public:
+    void insert_node(TreeNode* new_node){
+        if(new_node->data < data){
+            if(left==NULL){
+                left = new_node;
+            }else{
+                left->insert_node(new_node);
+            }
+        } else if(new_node->data > data){
+            if(right==NULL){
+                right = new_node;
+            }else{
+                right->insert_node(new_node);
+            }
+        } 
+        else {
+            if(left == NULL){
+                left = new_node;
+            }else{
+                new_node->left = left;
+                left = new_node;
+            }
+        }
+    }
+
+    void print_node() const{
+        if(left != NULL) left->print_node();
+        cout << data << endl;
+        if(right != NULL) right->print_node();      
+    }
+
+    bool find_node(int value) const{
+        if(value < data){
+            if(left == NULL){
+                return false;
+            }else{
+                return left->find_node(value);
+            }
+        }else if(value > data){
+            if(right == NULL){
+                return false;
+            }else{
+                return right->find_node(value);
+            }
+        }
+        return true;
+    }
+    
+private:
+    int data;
+    TreeNode* left;
+    TreeNode* right;
+friend class BinarySearchTree;
+};
+
+class BinarySearchTree{
+public:
+    BinarySearchTree(){
+        root = NULL;
+    }
+    void insert(int data){
+        TreeNode* new_node = new TreeNode;
+        new_node->data = data;
+        new_node->left = NULL;
+        new_node->right= NULL;
+
+        if(root == NULL){
+            root = new_node;
+        }else{
+            root->insert_node(new_node);
+        }
+    }
+
+    void print() const{
+        if(root != NULL){
+            root->print_node();
+        }
+    }
+
+    void find(int value) const{
+        bool check = false;
+        if(root == NULL){
+            check = false;
+        }else{
+            check = root->find_node(value);
+        }
+
+        if(check) cout << "Found it!" << endl;
+        else cout<< "Nope!" << endl;
+    }
+private:
+    TreeNode* root;
+};
+
+int main(){
+
+    BinarySearchTree t;
+
+    t.insert(5);
+    t.insert(2);
+    t.insert(7);
+    t.insert(3);
+    t.insert(4);
+    t.insert(8);
+    t.insert(7);
+    t.insert(6);
+
+    t.print();
+
+    t.find(5); // Found it!
+    t.find(11); // Nope!
+    t.find(7); // Found it!
+}
+</pre>
+      </div>
+      
+      <div class="col-sm-1"></div>
+
+    </div>
+</div>
+
+
+<!-- -------------------------------- -->
+<div class=empty-row-1> </div>
+<!-- -------------------------------- -->
