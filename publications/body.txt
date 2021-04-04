@@ -15,13 +15,11 @@
 
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <h3>Wonjun Lee</h3>
                 <%personal%>
                 <%office%>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </div>
 
