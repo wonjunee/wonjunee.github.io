@@ -72,12 +72,21 @@ public:
         list_ = new int[size_];
     }
 
-    // copy constructor
+    // copy constructor: l-value
     Wow(const Wow& other){
         cout << "copy constructor\n";
         size_ = other.size_;
         list_ = new int[size_];
-        for(int i=0 ; i < size_;++i) list_[i] = other.list_[i];
+        for(int i=0;i < size_;++i) list_[i] = other.list_[i];
+    }
+
+    // move constructor: r-value
+    Wow(Wow&& other){
+        cout << "move constructor\n";
+        size_ = other.size_;
+        list_ = other.list_;
+        other.size_ = 0;
+        other.list_ = nullptr;
     }
 
     // assignment operator
@@ -93,7 +102,7 @@ public:
         delete[] list_;
         size_ = other.size_;
         list_ = new int[size_];
-        for(int i=0 ; i < size_;++i) list_[i] = other.list_[i];
+        for(int i=0;i < size_;++i) list_[i] = other.list_[i];
 
         return *this;
     }
@@ -118,7 +127,7 @@ public:
     ~Wow(){
         delete[] list_;
     }
-private:
+// private:
     int  size_;
     int* list_; // list of integers in heap
 };
@@ -133,13 +142,15 @@ int main(){
     clock_t t;
 
     t = clock();
-    Wow A = create_wow_object(100000); // default
-    Wow B(A); // copy constructor
-    B = create_wow_object(1000000000); // r -value
+    Wow A = create_wow_object(1000000000); // A: l-value
+    Wow B(std::move(A)); // copy constructor move: A l-value -> r-value
+
+    printf("A: %d\n", A.size_);
 
     printf("time: %5.2e seconds\n", ((float) clock() -t)/CLOCKS_PER_SEC);
 
 }
+
     	</pre>
   </div>
 

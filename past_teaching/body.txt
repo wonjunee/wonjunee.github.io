@@ -15,13 +15,11 @@
     
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <h3>Wonjun Lee</h3>
                 <%personal%>
                 <%office%>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </div>
 
@@ -30,8 +28,7 @@
 
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <h4>Past Teaching</h4>
                 <h5>2020</h5>
                 <p><A href="./math151b_20sc/home/">Summer - Math 151B: Applied Numerical Methods</A></p>
@@ -51,7 +48,6 @@
                 <h5>2017</h5>
                 <p>Fall - PIC 16: Python With Applications</p>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </div>
 
@@ -59,11 +55,9 @@
 
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button>
             </div>
-            <div class="col-md-2"></div>
         </div>
     </div>
 
