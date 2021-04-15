@@ -34,7 +34,7 @@
           <ul class="dropdown-menu">
             <li><a href="../week1/">Week 1</a></li>
             <li><a href="../week2/">Week 2</a></li>
-            <li><a href="../week3/">Week 3</a></li>
+            <li><a href="../week3/">Week 3 (SFML)</a></li>
             <!-- <li><a href="../week4/">Week 4</a></li> -->
             <!-- <li><a href="../week5/">Week 5</a></li> -->
             <!-- <li><a href="../week6/">Week 6</a></li> -->
@@ -47,14 +47,14 @@
       </ul>
     </div>
   <hr>  <div class="container bg-3 text-left">
-    <h3>Week3</h3>  
+    <h2>Week3</h2>  
   </div>
 
   <div class=empty-row-1> </div>
 
   <div class="container bg-3 text-left">
-    <h4>Tuesday</h4>
-    <h5>Filesystem</h5>
+    <h3>Tuesday</h3>
+    <h4>Filesystem</h4>
     <p>Opening files from the directories</p>
   </div>
   <div class="container bg-3 text-left">
@@ -109,7 +109,7 @@ int main(){
 
   <div class="container bg-3 text-left">
 
-    <h5>Finding the longest subsequence</h5>
+    <h4>Finding the longest subsequence</h4>
   </div>
 
 
@@ -192,6 +192,114 @@ int main(){
 
   <div class=empty-row-1> </div>
 
+
+
+  <div class="container bg-3 text-left">
+        <h3>Tuesday</h3>
+  </div>
+
+  <div class=empty-row-1> </div>
+
+    <div class="container bg-3 text-left">
+        <h4>Installing SFML on Mac</h4>
+    </div>
+
+    <div class="container bg-3 text-left">
+        <h5>Step 1: Install Homebrew</h5>
+        <p>To check if your Mac has a homebrew installed already, type brew on your terminal. If the error shows up saying it cannot recognize the command, then you have to install homebrew</p>
+        <p>Type the following line on your terminal to install the Homebrew. [<a href="https://brew.sh">Homebrew website</a>]</p>
+<pre class="prettyprint lang-bsh">
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</pre>
+        <p>Now you have installed the Homebrew</p>
+    </div>
+
+    <div class="container bg-3 text-left">
+        <h5>Step 2: Install SFML</h5>
+        <p>Type the following line on your terminal to install the SFML.</p>
+<pre class="prettyprint lang-bsh">
+brew install sfml
+</pre>
+        <p>If you get an error from installation then you may need to type the following lines on your terminal.</p>
+<pre class="prettyprint lang-bsh">
+export HOMEBREW_NO_BOTTLE_SOURCE_FALLBACK=1
+brew install sfml
+</pre>
+    </div>
+
+        
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+
+    <h4>Bouncing the ball using SFML</h4>
+    <p>The following code will show the animation of the ball bouncing on the walls.</p>
+  </div>
+
+
+  <div class="container bg-3 text-left">
+      <pre class="prettyprint lang-cpp">
+#include < SFML/Graphics.hpp >
+int main() {
+    sf::RenderWindow window(sf::VideoMode(800, 800), "SFML works!");
+    sf::CircleShape circle(100.f);
+    circle.setFillColor(sf::Color::Green);
+    circle.setPosition(100, 300);
+    
+    double velx = 1; // horizontal velocity
+    double vely = 1; // vertical velocity
+    
+    while (window.isOpen()) {
+        // close the window when "close" button of the window is clicked
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            }
+        }
+        
+        // try to comment this line and see what happens!
+        window.clear();
+        
+        // getting the position of the circle. (top left corner of the ball)
+        sf::Vector2f position = circle.getPosition();
+        
+        float x = position.x; // x position
+        float y = position.y; // y position
+        
+        // when the ball hits the boundary
+        // invert the velocity x
+        if(x<0){
+            velx = 1;
+        }else if(x>600){
+            velx = -1;
+        }
+        
+        // when the ball hits the boundary
+        // invert the velocity y
+        if(y<0){
+            vely = 1;
+        }else if(y>600){
+            vely = -1;
+        }
+        
+        // move the ball
+        circle.move(velx,vely);
+        
+        // draw the ball on the canvas
+        window.draw(circle);
+        
+        // showing
+        window.display();
+    }
+    return 0;
+}
+      </pre>
+  </div>
+
+  <div class=empty-row-1> </div>
 
     <div class="bottom-blank">
     </div>
