@@ -15,11 +15,13 @@
   
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <h3>Wonjun Lee</h3>
                 <%personal%>
                 <%office%>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
 
@@ -30,7 +32,8 @@
 
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <h4>Tutoring</h4>
             
             <p>I have 11 years of tutoring experience</p>
@@ -64,6 +67,7 @@
 
             <p>Please email me at <b>wlee10 at ucla.edu</b> for more details!</p>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
 
@@ -72,9 +76,11 @@
 
     <div class="container bg-3 text-left">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button>
             </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
 
