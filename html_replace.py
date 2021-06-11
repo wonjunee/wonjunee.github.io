@@ -2,7 +2,7 @@ import json
 with open("info.json") as F:
 	dic = json.load(F)
 
-files_dir = ['.', 'publications','tutoring','past_teaching']
+files_dir = ['.', 'research','tutoring','past_teaching']
 
 for file_dir in files_dir:
 	html = ""
