@@ -14,8 +14,8 @@
     <div class="empty-row-4"></div>
 
     <div class="container bg-3 text-left">
-        <div class="row">
-            <div class="col-md-8 ms-md-auto">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
                 <h3>Wonjun Lee</h3>
                 <%personal%>
                 <%office%>
@@ -26,8 +26,8 @@
     <div class="empty-row-1"></div>
 
     <div class="container bg-3 text-left">
-        <div class="row">
-            <div class="col-md-8 ms-md-auto">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
                 <h4>Research Interests</h4>
                 <p>Computational Math, Convex Optimization, Optimal Transport, Gradient Flows, Mean Field Games</p>
             </div>
@@ -37,8 +37,8 @@
     <div class="empty-row-1"></div>
 
     <div class="container bg-3 text-left">
-        <div class="row">
-            <div class="col-md-8 ms-md-auto">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
                 <h4>Publications and Preprints</h4>
                 <ul class="a">
                     <li style="padding-bottom:1em">W. Lee, <a href="https://people.math.sc.edu/wuchen/index.html">W. Li</a>, <a href="https://linbo.one">B. Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">A. Monod</a>
@@ -75,8 +75,8 @@
 
 
     <div class="container bg-3 text-left">
-        <div class="row">
-            <div class="col-md-8 ms-md-auto">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
                 <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button>
             </div>
         </div>
