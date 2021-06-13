@@ -27,7 +27,7 @@
 <body>
 
 
-<main>
+<header>
 
     <div class="empty-row-4"></div>
 
@@ -40,6 +40,9 @@
             </div>
         </div>
     </div>
+</header>
+
+<main>
 
     <div class="empty-row-1"></div>
 
