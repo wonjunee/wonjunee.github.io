@@ -49,7 +49,7 @@ tab2 { padding-left: 8em; }
   font-style: italic;
 }
 
-a:link {
+/*a:link {
   text-decoration: none;
   color: Blue;
 }
@@ -67,7 +67,7 @@ a:hover{
 a:active {
   text-decoration: underline;
   color: Blue;
-}
+}*/
 
 p.it {
   font-style: italic;
