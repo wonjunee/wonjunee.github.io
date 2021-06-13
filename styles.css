@@ -94,3 +94,7 @@ body {
 ul.a {
   list-style-type: circle;
 }
+
+ul.b {
+  list-style-type: circle inside;
+}
