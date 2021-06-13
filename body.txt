@@ -24,7 +24,7 @@
 <body>
     <div class="empty-row-4"></div>
     
-    <div class="container bg-3 text-left">
+    <div class="container bg-3">
         <div class="row  justify-content-center">
             <div class="col-md-4">
                 <h3>Wonjun Lee</h3>
@@ -37,14 +37,14 @@
                 width:150px;
                 height:150px;
                 border-radius:10px;
-                margin-top:20px;">
+                margin-top:0px;">
             </div>
         </div>
     </div>
 
     <div class="empty-row-1"></div>
 
-    <div class="container bg-3 text-left">
+    <div class="container bg-3">
         <div class="row  justify-content-center">
             <div class="col-md-8">
                 <p> I am an applied math Ph.D. candidate studying under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
