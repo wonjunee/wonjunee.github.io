@@ -22,100 +22,101 @@
 </head>
 
 <body>
-    <div class="empty-row-4"></div>
-    
-    <div class="container bg-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-4">
-                <h3>Wonjun Lee</h3>
-                <%personal%>
-                <%office%>
-            </div>
-            <div class="col-md-4">
-                <img src="https://avatars2.githubusercontent.com/u/17661230?s=460&v=4" alt="profile photo"  align="right"
-            style="
-                width:150px;
-                height:150px;
-                border-radius:10px;
-                margin-top:0px;">
-            </div>
-        </div>
-    </div>
-
-    <div class="empty-row-1"></div>
-
-    <div class="container bg-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <p> I am an applied math Ph.D. candidate studying under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
+    <main>
+        <div class="empty-row-4"></div>
+        
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-4">
+                    <h3>Wonjun Lee</h3>
+                    <%personal%>
+                    <%office%>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://avatars2.githubusercontent.com/u/17661230?s=460&v=4" alt="profile photo"  align="right"
+                style="
+                    width:150px;
+                    height:150px;
+                    border-radius:10px;
+                    margin-top:0px;">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="empty-row-1"></div>
+        <div class="empty-row-1"></div>
 
-    <div class="container bg-3 text-left pb-1">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <h4>Email</h4>
-                <p>wlee at math.ucla.edu</p>
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <p> I am an applied math Ph.D. candidate studying under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- <div class="empty-row-1"></div> -->
+        <div class="empty-row-1"></div>
 
-    <div class="container bg-3 text-left pb-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <h4><a href="./research">Research</a></h4>
+        <div class="container bg-3 text-left pb-1">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <h4>Email</h4>
+                    <p>wlee at math.ucla.edu</p>
+                </div>
             </div>
         </div>
-    </div>
 
+        <!-- <div class="empty-row-1"></div> -->
 
-    <div class="container bg-3 text-left pb-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <h4><a href="./past_teaching">Past Teaching</a></h4>
+        <div class="container bg-3 text-left pb-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <h4><a href="./research">Research</a></h4>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container bg-3 text-left pb-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <h4><a href="./tutoring">Tutoring</a></h4>
+
+        <div class="container bg-3 text-left pb-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <h4><a href="./past_teaching">Past Teaching</a></h4>
+                </div>
             </div>
         </div>
-    </div>
 
-
-    <div class="container bg-3">
-        <div class="row  justify-content-center">
-            <div class="col-md-8">
-                <nav class="navbar navbar-expand-lg navbar-light bg-3 p-0">
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                      <ul class="navbar-nav">
-                        <h4> <li class="nav-item dropdown" style="color: #555555;">
-                          <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Current Teaching
-                          </a>
-                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="nav-link dropdown-item" href="./pic10c_21s">2021 Spring - PIC 10C: Advanced Programming</a>
-                          </div>
-                        </li>
-                         </h4>
-                      </ul>
-                    </div>
-                </nav>
+        <div class="container bg-3 text-left pb-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <h4><a href="./tutoring">Tutoring</a></h4>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="bottom-blank">
-    </div>
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-3 p-0">
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                            <h4> <li class="nav-item dropdown" style="color: #555555;">
+                              <a class="nav-link dropdown-toggle p-0" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Current Teaching
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="nav-link dropdown-item" href="./pic10c_21s">2021 Spring - PIC 10C: Advanced Programming</a>
+                              </div>
+                            </li>
+                             </h4>
+                          </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </main>
+        <div class="bottom-blank">
+        </div>
 </body>
 
 </html>                
