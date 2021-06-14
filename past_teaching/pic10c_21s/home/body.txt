@@ -9,7 +9,7 @@
   <div class="container bg-3 text-left">
 
     <h4>1A </h4>
-    <p>Tue/Thur 11:00am-11:50am (PT) <b><a href="https://ucla.zoom.us/j/94892624700">Zoom Link</a></b></p>
+    <p>Tue/Thur 11:00am-11:50am (PT)</p>
 
   </div>
 
@@ -17,7 +17,6 @@
   
   <div class="container bg-3 text-left">  
     <h4>Office Hours</h4>
-    <%officehours%>
   </div>
 
   <div class=empty-row-1> </div>
