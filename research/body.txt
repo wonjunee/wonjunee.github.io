@@ -79,8 +79,8 @@
                         <br> 
                         W. Lee, S. Liu, H. Tembine, W. Li, S. Osher
                         <ul class="b"> <li> SIAM Journal on Applied Math, Dec, 2020. [<a href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games">PDF</a>]</li> </ul>
-                    <li style="padding-bottom:1em">Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han, 
-                        <br> <b>Joint Task Assignment and Trajectory Optimization for a Mobile Robot Swarm by Mean-Field Game</b> 
+                    <li style="padding-bottom:1em"><b>Joint Task Assignment and Trajectory Optimization for a Mobile Robot Swarm by Mean-Field Game</b>  
+                        <br> Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han
                         <ul class="b"> <li> IEEE GLOBECOM 2020, Dec 7-11. [<a href="https://ieeexplore.ieee.org/document/9322422">PDF</a>]</li> </ul>
                     <li style="padding-bottom:1em"> <b>Energy-efficient Velocity Control for Massive Rotary-Wing UAVs: A Mean Field Game Approach</b>
                         <br>
