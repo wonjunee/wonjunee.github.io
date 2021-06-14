@@ -1,0 +1,30 @@
+
+  <div class="container bg-3 text-left">  
+    <h4>Course Description</h4>
+    <p><a href="https://www.math.ucla.edu/ugrad/courses/pic/16A">https://www.math.ucla.edu/ugrad/courses/pic/16A</a></p>
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+
+    <h4>1A </h4>
+    <p>Tue/Thur 1pm-1:50pm (PT) <b><a href="https://ucla.zoom.us/j/96123037421?pwd=dHJTZDdZMU5OcFN5TUNqNmZ6bVlsdz09">Zoom Link</a></b></p>
+    <h4>1B </h4>
+    <p>Mon/Wed 1pm-1:50pm (PT) <b><a href="https://ucla.zoom.us/j/96123037421?pwd=dHJTZDdZMU5OcFN5TUNqNmZ6bVlsdz09">Zoom Link</a></b></p>
+
+  </div>
+
+  <div class=empty-row-1> </div>
+  
+  <div class="container bg-3 text-left">  
+    <h4>Office Hours</h4>
+    <%officehours%>
+  </div>
+
+  <div class=empty-row-1> </div>
+
+  <div class="container bg-3 text-left">
+    <h4>Email</h4>
+    <p>wlee10 at ucla.edu</p>
+  </div>

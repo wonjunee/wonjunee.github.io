@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>PIC 16A - Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body> 
+
+<header>
+  <div class="empty-row-3"></div>
+  
+  <div class="container bg-3 mb-4">
+    <h3>Summer 2021</h3>
+    <h4>PIC 16A: Python With Applications</h4>
+    <h4>Discussion Section 1A and 1B</h4>
+    <a href="../../"><h4>Wonjun Lee</h4></a>
+  </div>
+
+  <div class="mb-4">
+  <hr>
+    <div class="container bg-3">
+      <nav class="navbar navbar-expand-lg navbar-light bg-3 pl-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../home/" style="font-weight: bold;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle bg-3"  style="font-weight: bold;" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Weeks
+              </a>
+              <div class="dropdown-menu p-0" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href=#>Soon</a>
+                <!-- <a class="dropdown-item" href="../week1/">Week 1</a> -->
+                <!-- <a class="dropdown-item" href="../week2/">Week 2</a> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  <hr>
+  </div>
+
+</header><div class="container bg-3 text-left">
+    <h3>Week8</h3>  
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Tuesday</h3>
+</div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P5.1. </h5> 
+
+            <p> Implement all member functions of the following class:</p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Person 
+{ 
+  public:
+    Person(); 
+    Person(string pname, int page); 
+    void get_name() const; 
+    void get_age() const; 
+  private:
+    string name; 
+    int age; // 0 if unknown 
+};
+
+// TODO
+/*
+
+  Implement all member functions of the class Person.
+
+*/
+
+Person::Person()
+{
+  name = "";
+  age  = 0;  
+}
+
+Person::Person(string pname, int page)
+{
+  name = pname;
+  age  = page;
+}
+
+void Person::get_name() const
+{
+  cout << "name : " << name << endl;
+}
+
+void Person::get_age() const
+{
+  cout << "age  : " << age << endl;
+}
+
+// ------------------------------
+// DON'T MODIFY BELOW
+
+int main()
+{
+  Person person1();
+  Person person2("James", 10);
+
+  cout << "person 1" << endl;
+  person1.get_name();
+  person1.get_age();
+  cout << "person 2" << endl;
+  person2.get_name();
+  person2.get_age();
+}
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P5.4. </h5> 
+
+            <p> Implement a class <i>Account</i>. An account has a balance, functions to add and withdraw money, and a function to query the current balance. Charge a $5 penalty if an attempt is made to withdraw more money than available in the account.</p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Account 
+{ 
+  public:
+    Account();
+    Account(double pbalance);
+    void add(double money);
+    void withdraw(double money);
+    void query() const;
+  private:
+    double balance;
+};
+
+// TODO
+/*
+
+  Implement all member functions of the class Account.
+
+*/
+
+Account::Account()
+{
+  balance = 0;
+}
+
+Account::Accoutn(double pbalance)
+{
+  balance = pbalance;
+}
+
+void Account::add(double money)
+{
+  balance += money;
+}
+
+void Account::withdraw(double money)
+{
+  if(money > balance)
+  {
+    balance -= 5;
+  }
+  else
+  {
+    balance -= money;
+  }
+}
+
+void Account::query()
+{
+  cout << "Your current balance is $ " << balance << "." << endl;
+}
+
+// ------------------------------
+// DON'T MODIFY BELOW
+
+int main()
+{
+  Account acc1(100);
+
+  acc1.add(200);
+  acc1.withdraw(50);
+
+  acc1.query(); // Expect to print out $ 250
+
+  acc1.withdraw(300);
+
+  acc1.query(); // Expect to print out $ 245
+}
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+<div class="container bg-3 text-left">
+    <h3>Thursday</h3>
+</div>
+
+
+
+<div class="container bg-3 text-left">
+    <div class="row">
+    
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <h5>Exercise P5.6. </h5> 
+
+            <p> Implement a class Bank. This bank has two objects, checking and savings, of the type Account that was developed in Exercise P5.4. Implement four member functions:</p>
+
+            <span class="code-output">
+                <p><i>void deposit(double amount, string account)</i></p> 
+                <p><i>void withdraw(double amount, string account)</i></p> 
+                <p><i>void transfer(double amount, string account)</i></p> 
+                <p><i>void print_balances()</i></p>
+            </span>
+
+            <p> Here the account string is "S" or "C". For the deposit or withdrawal, it indicates which account is affected. For a transfer it indicates the account from which the money is taken; the money is automatically transferred to the other account. </p>
+
+            <h5>Solution</h5>
+            <pre class="prettyprint lang-cpp" style="font-size: 8.5pt;">
+#include < iostream >
+#include < string >
+
+using namespace std;
+
+class Account
+{
+public:
+  Account();
+  Account(double pbalance);
+
+  void add(double money);    // mutator
+  void withdraw(double money); // mutator
+
+  double get_balance() const;
+  void query() const; // accessor
+private:
+  double balance;
+}; // Important to put a semicolon at the end of the class
+
+Account::Account()
+{
+  balance = 0;
+}
+
+Account::Account(double pbalance)
+{
+  balance = pbalance;
+}
+
+void Account::add(double money)
+{
+  // balance = balance + money;
+  balance += money; 
+}
+
+void Account::withdraw(double money)
+{
+  if(money > balance){
+    cout << "that was not cool" << endl;
+    balance -= 5;
+  }else{
+    balance -= money; 
+  }
+}
+
+double Account::get_balance() const
+{
+  return balance;
+}
+
+void Account::query() const
+{
+  cout << "--------------------------------" << endl;
+  cout << "    Your Current Balance" << endl;
+  cout << "          $ " << balance << endl;
+  cout << "--------------------------------" << endl;
+}
+
+
+// ------ BANK ------
+
+class Bank
+{
+public:
+  Bank();
+
+  void deposit(double amount, string account);  //mutator
+  void withdraw(double amount, string account); //mutator
+  void transfer(double amount, string account); //mutator
+  void print_balances() const;  // accessor
+private:
+  Account checking;
+  Account saving;
+};
+
+Bank::Bank()
+{
+  checking = Account();
+  saving   = Account();
+}
+
+void Bank::deposit(double amount, string account)
+{
+  if(account == "C"){
+    checking.add(amount);
+  }else if(account == "S"){
+    saving.add(amount);
+  }else{
+    cout << "Wrong Input" << endl;
+  }
+}
+
+void Bank::withdraw(double amount, string account)
+{
+  if(account == "C"){
+    checking.withdraw(amount);
+  }else if(account == "S"){
+    saving.withdraw(amount);
+  }else{
+    cout << "Wrong Input" << endl;
+  }
+}
+
+void Bank::transfer(double amount, string account)
+{
+  if(account == "C"){
+    checking.withdraw(amount);
+    saving.add(amount);
+  }else if(account == "S"){
+    saving.withdraw(amount);
+    checking.add(amount);
+  }else{
+    cout << "Wrong Input" << endl;
+  }
+}
+
+void Bank::print_balances() const
+{
+  cout << "     CHECKING   " << endl;
+  checking.query();
+  cout << "     SAVING" << endl;
+  saving.query();
+}
+
+int main()
+{
+  Bank B1;
+
+  while(true)
+  {
+    cout << "1. add \t 2. withdraw \t 3. transfer \t 4. query" << endl;
+
+    int choice;
+    cin >> choice;
+
+    if(choice == 1){
+      cout << "ADD" << endl;
+      cout << "Which account? : ";
+      string acc;
+      cin >> acc;
+      cout << "How much? : ";
+      double amount;
+      cin >> amount;
+
+      B1.deposit(amount, acc);
+
+    }else if(choice == 2){
+      cout << "WITHDRAW" << endl;
+      cout << "Which account? : ";
+      string acc;
+      cin >> acc;
+      cout << "How much? : ";
+      double amount;
+      cin >> amount;
+
+      B1.withdraw(amount, acc);
+
+    }else if(choice == 3){
+      cout << "TRANSFER" << endl;
+      cout << "Which account? : ";
+      string acc;
+      cin >> acc;
+      cout << "How much? : ";
+      double amount;
+      cin >> amount;
+
+      B1.transfer(amount, acc);
+
+    }else if(choice == 4){
+      cout << "QUERY" << endl;
+      B1.print_balances();
+    }else{
+      break;
+    }
+
+  }
+}
+
+
+
+            </pre>
+
+
+
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
+<div class=empty-row-1> </div>
+
+    <div class="bottom-blank">
+    </div>
+
+    </body>
+
+  </html>
