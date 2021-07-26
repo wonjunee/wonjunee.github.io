@@ -65,7 +65,7 @@
                     <li style="padding-bottom:1em">
                         <b>Computational Mean-Field Information Dynamics Associated With Reaction Diffusion Equations</b>
                         <br>
-                        W. Li, W. Lee, S. Osher <a href="https://www.imperial.ac.uk/people/a.monod">A. Monod</a>
+                        W. Li, W. Lee, S. Osher
                         <ul class="b"> <li>Submitted, 2021. [<a href="ftp://ftp.math.ucla.edu/pub/camreport/cam21-11.pdf">PDF</a>]</li></ul>
                     <li style="padding-bottom:1em">
                         <b>Tropical Optimal Transport and Wasserstein Distances in Phylogenetic Tree Space</b>
