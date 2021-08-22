@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # scp -r pic10c_21s wlee@joshua01.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
-# scp -r * wlee@joshua02.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
-scp -r research wlee@joshua01.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
+scp -r * wlee@joshua02.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
+# scp -r research wlee@joshua01.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html

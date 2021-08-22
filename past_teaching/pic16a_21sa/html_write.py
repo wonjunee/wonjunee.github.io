@@ -11,7 +11,7 @@ weeks = 10
 
 import json
 
-with open("../info.json") as F:
+with open("../../info.json") as F:
   dic = json.load(F)
 
 
