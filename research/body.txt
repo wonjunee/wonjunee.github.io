@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="padding-top"><hr></div> <!-- ------------------------------ -->
+        <div class="padding-top"></div> <!-- ------------------------------ -->
         
         <div class="container bg-3">
             <div class="row  justify-content-center">
@@ -79,8 +79,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="padding-bottom"><hr></div> <!-- ------------------------------ -->
 
 </header>
 
