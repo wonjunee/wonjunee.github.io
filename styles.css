@@ -37,6 +37,13 @@ tab2 { padding-left: 8em; }
   padding-bottom: 80px;
 }
 
+.padding-top{
+  padding-top: 1em;
+}
+.padding-bottom{
+  padding-bottom: 1em;
+}
+
 .bg-1 {
     background-color: #1abc9c; /* Green */
     color: #ffffff;
