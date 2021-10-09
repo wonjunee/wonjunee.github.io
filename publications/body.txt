@@ -61,7 +61,7 @@
 
                         <div class="row  justify-content-center">
                             <div class="col-md-8">
-                                <a class="btn btn-outline-secondary padding-top" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 Link with href
                                 </a>
 
