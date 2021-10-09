@@ -11,6 +11,12 @@ li { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 tab1 { padding-left: 4em; }
 tab2 { padding-left: 8em; }
 
+.navbar-no-padding { 
+  margin-bottom: 0; 
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 .empty-row-1 {
   padding-top: 1em;
 }
