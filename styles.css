@@ -19,6 +19,7 @@ tab2 { padding-left: 8em; }
 .active{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
   background-color: #F5F5F5;
+  font-weight: bold;
 }
 .navbar-no-padding { 
   padding-bottom: 0; 
