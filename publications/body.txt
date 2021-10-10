@@ -160,7 +160,7 @@
                     <li> ESAIM: COCV, 27:28, 2021. </li> 
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseBFMWGF2021" role="button" aria-expanded="false" aria-controls="collapseBFMWGF2021">
                 Abstract
                 </a>
 
@@ -172,9 +172,9 @@
                 Code
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseBFMWGF2021">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    We present a method to efficiently compute Wasserstein gradient flows. Our approach is based on a generalization of the back- and-forth method (BFM) introduced in [arXiv:1905.12154] to solve optimal transport problems. We evolve the gradient flow by solving the dual problem to the JKO scheme. In general, the dual problem is much better behaved than the primal problem. This allows us to efficiently run large scale gradient flows simulations for a large class of internal energies including singular and non-convex energies.
                   </div>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                     <li> SIAM Journal on Applied Math, Dec, 2020. </li> 
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseControl2020" role="button" aria-expanded="false" aria-controls="collapseControl2020">
                 Abstract
                 </a>
 
@@ -202,9 +202,9 @@
                 PDF
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseControl2020">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    The  coronavirus  disease  2019  (COVID-19)  pandemic  is  changing  and  im-pacting lives on a global scale.  In this paper, we introduce a mean-field control modelin controlling the propagation of epidemics on a spatial domain.  The control variable,the spatial velocity, is first introduced for the classical disease models, such as the SIRmodel.  For this proposed model, we provide fast numerical algorithms based on proxi-mal primal-dual methods.  Numerical experiments demonstrate that the proposed modelillustrates how to separate infected patients in a spatial domain effectively. 
                   </div>
                 </div>
             </div>
@@ -223,7 +223,7 @@
                     <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseJoint2020" role="button" aria-expanded="false" aria-controls="collapseJoint2020">
                 Abstract
                 </a>
 
@@ -231,9 +231,9 @@
                 PDF
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseJoint2020">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    In recent years, there has been a growing interest in utilizing mobile robot swarm to execute several tasks at the same time. However, how to assign tasks to the swarm and optimize the trajectory of the robots scientifically to minimize energy consumption is still a big challenge. In this paper, we consider a mobile robot swarm system where a large number of robots are deployed by a centralized controller to execute a series of tasks, such as target detection tasks, cooperatively. The controller controls the velocity strategy of each robot, and makes corresponding task assignment decisions to minimize the overall cost of the robot swarm. Since the number of involving robots is large, it will be extremely difficult to consider the interaction between them. In this regard, we adopt the concept of mean-field term to approximate the behaviors and states of the robots, and formulate the joint task assignment and trajectory optimization problem as a mean-field game. To solve the problem efficiently, a primal-dual hybrid gradient algorithm is proposed to find the optimal trajectory and corresponding task assignment decisions for each robot. The numerical simulation results show the effectiveness of the proposed algorithm.
                   </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@
                     <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseEnergy2020" role="button" aria-expanded="false" aria-controls="collapseEnergy2020">
                 Abstract
                 </a>
 
@@ -262,9 +262,9 @@
                 PDF
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseEnergy2020">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    When a disaster happens in the metropolitan area, the wireless communication systems are highly affected, de- grading the efficiency of the search and rescue (SAR) mission. An emergent wireless network must be deployed quickly and efficiently to preserve human lives. Teams of low-altitude rotary- wing unmanned aerial vehicle (UAVs) is preferable to be utilized as an on-demand temporal wireless network because they are generally faster to deploy, flexible to reconfigure, and able to provide better communication services with short line-of-sight links. However, rotary-wing UAVs’ limited on-board batteries require that they need to recharge and reconfigure frequently during a mission. Therefore, we formulate the velocity control problem for massive rotary-wing UAVs as a Schrödinger bridge problem which can describe the frequent reconfiguration of UAVs. Then we transform it into a mean field game and solve it with the G-prox primal dual hybrid gradient (PDHG) method. Finally, we show the efficiency of our algorithm and analyze the influence of wind dynamics with numerical results.
                   </div>
                 </div>
 
@@ -286,7 +286,7 @@
                     <li> Journal of Computational Physics, Nov, 2020. </li>
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseGene2020" role="button" aria-expanded="false" aria-controls="collapseGene2020">
                 Abstract
                 </a>
 
@@ -294,9 +294,9 @@
                 PDF
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseGene2020">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    We introduce fast algorithms for generalized unnormalized optimal transport. To handle densities with different total mass, we consider a dynamic model, which mixes the $L^p$ optimal transport with $L^p$ distance. For $p=1$, we derive the corresponding $L^1$ generalized unnormalized Kantorovich formula. We further show that the problem becomes a simple $L^1$ minimization which is solved efficiently by a primal-dual algorithm. For $p=2$, we derive the $L^2$ generalized unnormalized Kantorovich formula, a new unnormalized Monge problem and the corresponding Monge-Amp\`ere equation. Furthermore, we introduce a new unconstrained optimization formulation of the problem. The associated gradient flow is essentially related to an elliptic equation which can be solved efficiently. Here the proposed gradient descent procedure together with the Nesterov acceleration involves the Hamilton-Jacobi equation which arises from the KKT conditions. Several numerical examples are presented to illustrate the effectiveness of the proposed algorithms.
                   </div>
                 </div>
             </div>
