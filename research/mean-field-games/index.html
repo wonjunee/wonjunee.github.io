@@ -121,7 +121,7 @@
 
                 <p>\begin{equation*}
                     \begin{aligned}
-                        &\inf_{\rho_i,v_i} E(\rho_I(T,\cdot)) + \sum_{i=S,I,R} \int^T_0 \int_\Omega \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + F((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt\\
+                        &\inf_{\rho_i,v_i} E(\rho_I(T,\cdot)) +  \int^T_0 \sum_{i=S,I,R} \int_\Omega \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + F((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt\\
                         &\text{subject to \eqref{eq:spatial-SIR}, given } \rho_i(0,\cdot)\,(i=S,I,R)
                     \end{aligned}
                     \end{equation*}
@@ -133,7 +133,7 @@
                     E(u) = \int_\Omega u^2(x) \,dx,\quad F(u) = \int_\Omega u^2(x) \,dx.
                 \end{equation}</p>
 
-                <p> \(E(\rho_I)\) is the terminal cost functional that minimizes the total mass of infectious population density. \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) are costs of transporting the population densities of group \(i=S,I,R\). \(F(\rho_S+\rho_I+\rho_R\) is the concentraion cost of the total mass of populations. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the transportation costs of each population, the total populations concentration, and the total mass of the infectious population density at the terminal time \(T\).</p>
+                <p> \(E(\rho_I)\) is the terminal cost functional that minimizes the total mass of infectious population density. The function \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) is the transportation cost of the population density of each group \(i=S,I,R\). The functional \(F(\rho_S+\rho_I+\rho_R)\) is the concentraion cost of the total mass of populations. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the transportation costs of each population, the total populations concentration, and the total mass of the infectious population density at the terminal time \(T\).</p>
 
             </div>
         </div>
