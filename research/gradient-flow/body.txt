@@ -99,9 +99,15 @@
                 <p>$$\begin{aligned} 
                         \partial_t \rho - \nabla \cdot (\rho \nabla \phi)=0&\\
                         \phi = \delta U(\rho)&
-                    \end{aligned}$$</p>
-                <p>$$ \partial_t \rho - \nabla \cdot (\rho \nabla \phi)=0$$</p>
-                <p>where 
+                    \end{aligned}$$
+                </p>
+                <p>where $\rho$ is a mass density, $\phi$ is a pressure$, and $\delta U(\rho)$ is the Frechet derivative of $U$ at $\rho$. This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
+                <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
+                then the PDE becomes the <b>porous medium equation</b>,
+                <p>$$\partial_t \rho - \Delta (\rho^m) = 0$$.</p>
+                <p>We solve this PDE via the JKO scheme [1], a discrete-in-time variational formulation of the PDE. Given $\rho^{(0)}$, the scheme iterates</p>
+                <p>$$\rho^{(n+1)} = \text{argmin}\limits_{1\leq j\leq n}$$</p>
+                </p>
             </div>
         </div>
     </div>
