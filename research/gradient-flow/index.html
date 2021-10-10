@@ -107,12 +107,14 @@
                 <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
                 then the PDE becomes the <b>porous medium equation</b>,
                 <p>$$\partial_t \rho - \Delta (\rho^m) = 0.$$</p>
-                <p>We solve this PDE via the JKO scheme [<a href="#ref-jko">1</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
+                <p>We solve this PDE via <b>the JKO scheme</b> [<a href="#ref-jko">1</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
 
                 <p>$$\rho^{(n+1)} = \text{arg}\min_{\rho}\, U(\rho) + \frac{1}{2\tau} W_2(\rho, \rho^{(n)})^2$$</p>
 
-                <p>where \(\tau\) is a time step size, \(W_2\) is a 2-Wasserstein distance, and \(\rho^{(n)}\) is an approximate solution $\rho(n\tau, \cdot)$ of the PDE.</p>
-                <p>We solve this variational formulation expanding upon the back-and-forth method (BFM) [<a href="#ref-wgf">2</a>], a fast numerical method for optimal transport problems.</p> 
+                <p>where \(\tau\) is a time step size, \(W_2\) is a 2-Wasserstein distance, and \(\rho^{(n)}\) is an approximate solution \(\rho(n\tau, \cdot)\) of the PDE.
+                We solve this variational formulation expanding upon <b>the back-and-forth method (BFM)</b> [<a href="#ref-wgf">2</a>], a fast numerical method for optimal transport problems. Below are some of our results solving difficult PDE problems including porous medium equations, incompressible flows, and aggregation-diffusion equations.</p> 
+
+
             </div>
         </div>
     </div>
