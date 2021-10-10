@@ -73,22 +73,142 @@
     <div class="container bg-3">
         <div class="row  justify-content-center">
             <div class="col-md-8">
-                <h4>Research Interests</h4>
-                <p>My research focuses on developing fast and accurate algorithms for optimal transport and the implementations to solve PDEs and real-world problems arising in image processing and machine learning. Below is the list of my research interests.</p>
-                <ul>
-                    <li>PDE-based machine learning and image processing</li>
-                    <li>Optimization</li>
-                    <li>Optimal transport</li> 
-                    <li>Gradient flows</li> 
-                    <li>Mean field games</li>
-                </ul>
+                <h4>Wasserstein Gradient Flows</h4>
+                
+                <a class="btn btn-outline-secondary" href="https://arxiv.org/pdf/2011.08151" role="button">
+                PDF
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://wasserstein-gradient-flows.netlify.app" role="button">
+                Code
+                </a>
             </div>
         </div>
     </div>
     
     <div class="empty-row-1"></div>
 
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <p> This page briefly describes the paper, <b>The back-and-forth method for Wasserstein gradient flows</b> [<a href="#ref-wgf">1</a>]. To see the details, check the <b>PDF</b> and <b>Code</b> links above.</p>
+                <br>
+                <p> In this project, we proposed a new algorithm to compute the following class of PDEs: </p>
+                <p>$$\begin{aligned} 
+                        \partial_t \rho - \nabla \cdot (\rho \nabla \phi)=0&\\
+                        \phi = \delta U(\rho)&
+                    \end{aligned}$$
+                </p>
+                <p>where \(\rho\) is a mass density, \(\phi\) is a pressure, and \(\delta U(\rho)\) is the Frechet derivative of \(U\) at \(\rho\). This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
+                <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
+                then the PDE becomes the <b>porous medium equation</b>,
+                <p>$$\partial_t \rho - \Delta (\rho^m) = 0.$$</p>
+                <p>We solve this PDE via <b>the JKO scheme</b> [<a href="#ref-jko">2</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
+
+                <p>$$\rho^{(n+1)} = \text{arg}\min_{\rho}\, U(\rho) + \frac{1}{2\tau} W_2(\rho, \rho^{(n)})^2$$</p>
+
+                <p>where \(\tau\) is a time step size, \(W_2\) is a 2-Wasserstein distance, and \(\rho^{(n)}\) is an approximate solution \(\rho(n\tau, \cdot)\) of the PDE.
+                We solve developed an algorithm to solve the JKO scheme expanding upon <b>the back-and-forth method (BFM)</b> [<a href="#ref-bfm">3</a>], a fast numerical method for optimal transport problems.</p> 
+                <p> Below are some of our results solving difficult PDE problems including porous medium equations, incompressible flows, and aggregation-diffusion equations.</p> 
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>Videos</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>Porous medium equations with an obstacle and potential</b></p>
+
+                <p>$$
+                \begin{aligned}
+                    U(\rho) &= \int \frac{1}{3} \rho^4(x) + V(x)\,dx \\
+                    V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) .
+                \end{aligned}
+                $$</p>
+        </div></div>
+                
+        <div class="row  justify-content-center"><div class="col-md-6">
+            <video width="100%" height="100%" controls>
+              <source src="https://flavienleger.github.io/resources/gf/quadratic-potential-star-obstacle-m-4.mp4" type="video/mp4">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+            </video>
+        </div></div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>Aggregation-diffusion equations</b></p>
+
+                <p>$$
+                    U(\rho) = \int \rho^2(x)\,dx + \int \int \rho(x) \|x-y\|^2 \rho(y) \, dx\,dy.
+                $$</p>
+        </div></div>
+                
+        <div class="row  justify-content-center"><div class="col-md-6">
+                <video width="100%" height="100%" controls>
+                  <source src="https://flavienleger.github.io/resources/gf/aggregation3d.mp4" type="video/mp4">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                Your browser does not support the video tag.
+                </video>
+        </div></div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>Incompressible flows (crowd motion) with an obstacle and potential</b></p>
+
+                <p>$$
+                \begin{aligned}
+                    U(\rho) &= \int u_\infty (\rho(x)) + V(x)\,dx \\
+                    V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) \\
+                \end{aligned}
+                $$</p>
+                <p>$$u_\infty(t) =
+                        \begin{cases}
+                            0 & \text{if } 0 \leq t \leq 1\\
+                            \infty & \text{otherwise.}
+                        \end{cases}$$</p>
+        </div></div>
+
+        <div class="row  justify-content-center"><div class="col-md-6">
+                <video width="100%" height="100%" controls>
+                  <source src="https://flavienleger.github.io/resources/gf/incompressible-fourballs.mp4" type="video/mp4">
+                  <!-- <source src="movie.ogg" type="video/ogg"> -->
+                Your browser does not support the video tag.
+                </video>
+        </div></div>
+    </div>
     
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>References</h4>
+                
+                <p id="ref-wgf">[1] Matt Jacobs, Wonjun Lee and Flavien Léger. <a href="https://arxiv.org/pdf/2011.08151.pdf">The back-and-forth method for Wasserstein gradient flows</a>. 2020.</p>
+                <p id="ref-jko">[2] Richard Jordan and David Kinderlehrer and Felix Otto. The variational formulation of the Fokker-Planck equation. SIAM journal on mathematical analysis 29.1 (1998): 1–17.</p>
+                <p id="ref-bfm">[3] Matt Jacobs and Flavien Léger. <a href="https://arxiv.org/pdf/1905.12154.pdf"> A fast approach to optimal transport: The back-and-forth method.</a> Numerische Mathematik (2020): 1-32.</p>
+
+            </div>
+        </div>
+    </div>
     
 
     <div class="container bg-3">
@@ -101,6 +221,7 @@
 
     <div class="bottom-blank">
     </div>
+
 </main>
 </body>
 
