@@ -173,6 +173,7 @@
                 \begin{aligned}
                     U(\rho) &= \int u_\infty (\rho(x)) + V(x)\,dx \\
                     V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) \\
+                    \vspace{0.5cm}
                     u_\infty(t) &=
                         \begin{cases}
                             0 & \text{if } 0 \leq t \leq 1\\
