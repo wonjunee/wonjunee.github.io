@@ -31,7 +31,7 @@
           extensions: ["tex2jax.js"],
           jax: ["input/TeX", "output/HTML-CSS"],
           tex2jax: {
-              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              inlineMath: [ ['$(',')$'], ["\\(","\\)"] ],
               processEscapes: true,
           },
           "HTML-CSS": { availableFonts: ["TeX"] }
@@ -113,7 +113,7 @@
                         \phi = \delta U(\rho)&
                     \end{aligned}$$
                 </p>
-                <p>where \\(\rho\\) is a mass density, $\phi$ is a pressure, and $\delta U(\rho)$ is the Frechet derivative of $U$ at $\rho$. This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
+                <p>where $(\rho)$ is a mass density, $\phi$ is a pressure, and $\delta U(\rho)$ is the Frechet derivative of $U$ at $\rho$. This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
                 <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
                 then the PDE becomes the <b>porous medium equation</b>,
                 <p>$$\partial_t \rho - \Delta (\rho^m) = 0$$.</p>
