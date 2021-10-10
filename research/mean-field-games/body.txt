@@ -114,8 +114,9 @@
                 <p>\begin{equation}\label{hello}
                     \phi+\psi < c
                     \end{equation}
-                }
                 </p>
+
+                <p>\eqref{hello}</p>
 
 
 
