@@ -106,9 +106,9 @@
                 <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
                 then the PDE becomes the <b>porous medium equation</b>,
                 <p>$$\partial_t \rho - \Delta (\rho^m) = 0$$.</p>
-                <p>We solve this PDE via the JKO scheme [1], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
+                <p>We solve this PDE via the JKO scheme [<a href="#ref-jko">1</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
                 <p>$$\rho^{(n+1)} = \text{argmin}{}\limits_{1\leq j\leq n}$$.</p>
-                <p>We solve this variational formulation expanding upon the back-and-forth method (BFM) [2], a fast numerical method for optimal transport problems.</p> 
+                <p>We solve this variational formulation expanding upon the back-and-forth method (BFM) [<a href="#ref-wgf">2</a>], a fast numerical method for optimal transport problems.</p> 
             </div>
         </div>
     </div>
@@ -119,8 +119,8 @@
             <div class="col-md-8">
                 <h4>References</h4>
                 
-                <p>[1] Richard Jordan and David Kinderlehrer and Felix Otto. The variational formulation of the Fokker-Planck equation. SIAM journal on mathematical analysis 29.1 (1998): 1–17.</p>
-                <p>[2] Matt Jacobs and Flavien Léger. <a href="https://arxiv.org/pdf/1905.12154.pdf"> A fast approach to optimal transport: The back-and-forth method.</a> Numerische Mathematik (2020): 1-32.</p>
+                <p id="ref-jko">[1] Richard Jordan and David Kinderlehrer and Felix Otto. The variational formulation of the Fokker-Planck equation. SIAM journal on mathematical analysis 29.1 (1998): 1–17.</p>
+                <p id="ref-wgf">[2] Matt Jacobs and Flavien Léger. <a href="https://arxiv.org/pdf/1905.12154.pdf"> A fast approach to optimal transport: The back-and-forth method.</a> Numerische Mathematik (2020): 1-32.</p>
 
                 <a class="btn btn-outline-secondary" href="https://wasserstein-gradient-flows.netlify.app" role="button">
                 Code
