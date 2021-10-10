@@ -126,16 +126,20 @@
                 
                 <ul class="b"> 
                     <li>W. Lee, S. Liu, W. Li, S. Osher</li>
-                    <li> Submitted, Apr, 2021. [<a href="https://arxiv.org/pdf/2104.11887.pdf">PDF</a>]</li>
+                    <li> Submitted, Apr, 2021.</li>
                 </ul>
 
-                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseMFGVaccine2021" role="button" aria-expanded="false" aria-controls="collapseMFGVaccine2021">
                 Abstract
                 </a>
 
-                <div class="collapse" id="collapseExample">
+                <a class="btn btn-outline-secondary" href="https://arxiv.org/pdf/2104.11887" role="button">
+                PDF
+                </a>
+
+                <div class="collapse" id="collapseMFGVaccine2021">
                   <div class="card card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    With the invention of the COVID-19 vaccine, shipping and distributing are crucial in controlling the pandemic. In this paper, we build a mean-field variational problem in a spatial domain, which controls the propagation of pandemic by the optimal transportation strategy of vaccine distribution. Here we integrate the vaccine distribution into the mean-field SIR model designed in [arXiv:2006.01249]. Numerical examples demonstrate that the proposed model provides practical strategies in vaccine distribution on a spatial domain.
                   </div>
                 </div>
 
@@ -148,16 +152,24 @@
     <div class="container bg-3">
         <div class="row  justify-content-center">
             <div class="col-md-8">
-                <p><b>The back-and-forth method for Wasserstein gradient flows</b></p>
+                <p><b>The Back-And-Forth Method For Wasserstein Gradient Flows</b></p>
 
                 
                 <ul class="b"> 
                     <li><a href="https://www.math.ucla.edu/~majaco/">M. Jacobs</a>, W. Lee, <a href="https://flavienleger.github.io">F. L&#233;ger</a> </li>
-                    <li> ESAIM: COCV, 27:28, 2021. [<a href="https://arxiv.org/pdf/2011.08151">PDF</a>, <a href="https://wasserstein-gradient-flows.netlify.app">Code</a>]</li> 
+                    <li> ESAIM: COCV, 27:28, 2021. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://arxiv.org/pdf/2011.08151" role="button">
+                PDF
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://wasserstein-gradient-flows.netlify.app" role="button">
+                Code
                 </a>
 
                 <div class="collapse" id="collapseExample">
@@ -179,11 +191,15 @@
                 
                 <ul class="b"> 
                     <li>W. Lee, S. Liu, H. Tembine, W. Li, S. Osher</li>
-                    <li> SIAM Journal on Applied Math, Dec, 2020. [<a href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games">PDF</a>]</li> 
+                    <li> SIAM Journal on Applied Math, Dec, 2020. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games" role="button">
+                PDF
                 </a>
 
                 <div class="collapse" id="collapseExample">
@@ -204,11 +220,15 @@
  
                 <ul class="b"> 
                     <li> Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han</li>
-                    <li> IEEE GLOBECOM 2020, Dec 7-11. [<a href="https://ieeexplore.ieee.org/document/9322422">PDF</a>]</li> 
+                    <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://ieeexplore.ieee.org/document/9322422" role="button">
+                PDF
                 </a>
 
                 <div class="collapse" id="collapseExample">
@@ -231,11 +251,15 @@
                 
                 <ul class="b"> 
                     <li> H. Gao, W. Lee, W. Li, Z. Han, S. Osher, V. Poor  </li>
-                    <li> IEEE GLOBECOM 2020, Dec 7-11. [<a href="ftp://ftp.math.ucla.edu/pub/camreport/cam19-57.pdf">PDF</a>]</li> 
+                    <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="ftp://ftp.math.ucla.edu/pub/camreport/cam19-57.pdf" role="button">
+                PDF
                 </a>
 
                 <div class="collapse" id="collapseExample">
@@ -259,11 +283,15 @@
                 
                 <ul class="b">
                     <li>W. Lee, <a href="http://homepages.rpi.edu/~lair/">R. Lai</a>, W, Li, S. Osher</li>
-                    <li> Journal of Computational Physics, Nov, 2020. [<a href="https://www.researchgate.net/publication/338990122_Generalized_Unnormalized_Optimal_Transport_and_its_fast_algorithms">PDF</a>]</li>
+                    <li> Journal of Computational Physics, Nov, 2020. </li>
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://www.researchgate.net/publication/338990122_Generalized_Unnormalized_Optimal_Transport_and_its_fast_algorithms" role="button">
+                PDF
                 </a>
 
                 <div class="collapse" id="collapseExample">
