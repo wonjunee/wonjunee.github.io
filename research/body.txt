@@ -67,7 +67,7 @@
                     </nav> -->
                     <ul class="nav nav-tabs">
                       <li class="nav-item">
-                        <a class="nav-link active" href="#">Research Interests</a>
+                        <a class="nav-link active" style="background-color: #F5F5F5;" href="#">Research Interests</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Gradient Flows</a>
@@ -94,7 +94,7 @@
                 <h4>Research Interests</h4>
                 <p>My research focuses on developing fast and accurate algorithms for optimal transport and the implementations to solve PDEs and real-world problems arising in image processing and machine learning. Below is the list of my research interests.</p>
                 <ul>
-                    <li>PDE-based image processing and machine learning</li>
+                    <li>PDE-based machine learning and image processing</li>
                     <li>Optimization</li>
                     <li>Optimal transport</li> 
                     <li>Gradient flows</li> 
