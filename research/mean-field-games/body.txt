@@ -111,9 +111,10 @@
 
                 <p>where \(\rho_i \,(i\in S,I,R)\) are the population densities of each group and \(v_i \,(i\in S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\). Using this spatial SIR model, we introduce the mean field optimal control model,</p>
 
-                <p>\begin{equation}\label{hello}
+                <p>$$
                     \phi+\psi < c
-                    \end{equation}
+                    \label{hello}
+                    $$
                 </p>
 
                 <p>\eqref{hello}</p>
