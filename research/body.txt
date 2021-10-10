@@ -51,10 +51,10 @@
                         <a class="nav-link active" style="background-color: #F5F5F5; border-bottom:1px solid #F5F5F5;" href="#">Research Interests</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Gradient Flows</a>
+                        <a class="nav-link" href="./gradient-flow">Gradient Flows</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#">Mean Field Games</a>
+                        <a class="nav-link" href="./mean-field-games">Mean Field Games</a>
                       </li>
                     </ul>
                 </div>
