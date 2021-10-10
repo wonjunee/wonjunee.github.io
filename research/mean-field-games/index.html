@@ -121,11 +121,18 @@
 
                 <p>\begin{equation*}
                     \begin{aligned}
-                        &\inf_{\rho_i,v_i} E(\rho_I) + \sum_{i=S,I,R} \int^T_0 \int_\Omega \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + \mathcal{F}((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt\\
-                        &\text{subject to \eqref{eq:spatial-SIR}, given } \rho_i(0,\cdot)\,(S,I,R)
+                        &\inf_{\rho_i,v_i} E(\rho_I(T,\cdot)) + \sum_{i=S,I,R} \int^T_0 \int_\Omega \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + F((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt\\
+                        &\text{subject to \eqref{eq:spatial-SIR}, given } \rho_i(0,\cdot)\,(i=S,I,R)
                     \end{aligned}
                     \end{equation*}
                 </p>
+
+                <p>where \(E,F\) are lower semi-continuous and convex functionals, for example</p>
+                <p>\begin{equation*}
+                    E(u) = \int_\Omega u^2\,dx,\quad F(u) = \int_\Omega u^2\,dx
+                \end{equation*}</p>
+
+                
 
 
 
