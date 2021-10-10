@@ -23,7 +23,7 @@
     
   <link rel="stylesheet" type="text/css" href="../../styles.css">
 
-  
+
   <!-- Adding MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -93,14 +93,14 @@
             <div class="col-md-8">
                 <p> This page briefly describes the paper, <b>Controlling Propagation of Epidemics via Mean-Field Games</b> [<a href="#ref-main">1</a>]. To see the details, check the <b>PDF</b> link above.</p>
                 <br>
-                <p> Consider one of the simplest epidemiologic models, Susceptible-Infective-Recovered (SIR) model.</p>
+                <p> Consider one of the simplest epidemiologic models, Susceptible-Infective-Recovered (SIR) model</p>
                 <p>$$\begin{aligned} 
                         \frac{dS(t)}{dt} &= -\beta S(t) I(t)\\
                         \frac{dI(t)}{dt} &= \beta S(t) I(t) - \gamma I(t)\\
                         \frac{dR(t)}{dt} &= \gamma I(t)
                     \end{aligned}$$
                 </p>
-                <p>where \(S,I,R\) represent the numbers of susceptible population, infected population, and recovered population, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \(S,I,R\), without giving local spatial information. We will extend this system of ODEs to the system of PDEs.</p>
+                <p>where \(S,I,R\) represent the numbers of susceptible, infected, and recovered populations, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \( \{S,I,R\} \), without giving local spatial information. We will extend this system of ODEs to the follosing system of PDEs. </p>
 
                 <p>$$\begin{aligned} 
                         & \partial_t \rho_S + \nabla \cdot (\rho_S v_S) + \beta \rho_S \rho_I - \frac{\eta_S^2}{2}\Delta \rho_S = 0\\
@@ -109,7 +109,7 @@
                     \end{aligned}$$
                 </p>
 
-                <p>where \(\rho_i,\,(S,I,R)\) 
+                <p>where \(\rho_i,\,(S,I,R)\) are the population densities of each group, and \(v_i,\,(S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\).</p>
 
                 <p>where \(\rho\) is a mass density, \(\phi\) is a pressure, and \(\delta U(\rho)\) is the Frechet derivative of \(U\) at \(\rho\). This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
                 <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
