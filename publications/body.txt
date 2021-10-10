@@ -220,7 +220,7 @@
  
                 <ul class="b"> 
                     <li> Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han</li>
-                    <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
+                    <li> IEEE GLOBECOM, Dec, 2020. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseJoint2020" role="button" aria-expanded="false" aria-controls="collapseJoint2020">
@@ -251,7 +251,7 @@
                 
                 <ul class="b"> 
                     <li> H. Gao, W. Lee, W. Li, Z. Han, S. Osher, V. Poor  </li>
-                    <li> IEEE GLOBECOM 2020, Dec 7-11. </li> 
+                    <li> IEEE GLOBECOM, Dec, 2020. </li> 
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseEnergy2020" role="button" aria-expanded="false" aria-controls="collapseEnergy2020">
