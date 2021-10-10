@@ -136,17 +136,17 @@
                 \end{aligned}
                 $$</p>
                 
-                <div class="embed-responsive embed-responsive-1by1">
+                <div class="embed-responsive embed-responsive">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/quadratic-potential-star-obstacle-m-4.mp4" allowfullscreen></iframe>
                 </div>
 
                 <p><b>Aggregation-diffusion equations</b></p>
 
                 <p>$$
-                    U(\rho) &= \int \rho^2(x)\,dx + \int \int \rho(x) \|x-y\|^2 \rho(y) \, dx\,dy.
+                    U(\rho) = \int \rho^2(x)\,dx + \int \int \rho(x) \|x-y\|^2 \rho(y) \, dx\,dy.
                 $$</p>
                 
-                <div class="embed-responsive embed-responsive-1by1">
+                <div class="embed-responsive embed-responsive">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/aggregation3d.mp4" allowfullscreen></iframe>
                 </div>
 
@@ -154,7 +154,7 @@
 
                 <p>$$
                 \begin{aligned}
-                    U(\rho) &= E\int u_\infty (\rho(x)) + V(x)\,dx \\
+                    U(\rho) &= \int u_\infty (\rho(x)) + V(x)\,dx \\
                     V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) \\
                     u_\infty(t) &=
                         \begin{cases}
@@ -164,7 +164,7 @@
                 \end{aligned}
                 $$</p>
                 
-                <div class="embed-responsive embed-responsive-1by1">
+                <div class="embed-responsive embed-responsive">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/incompressible-fourballs.mp4" allowfullscreen></iframe>
                 </div>
             </div>
