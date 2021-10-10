@@ -127,26 +127,12 @@
                 </p>
 
                 <p>where \(E,F\) are lower semi-continuous and convex functionals, for example</p>
-                <p>\begin{equation*}
-                    E(u) = \int_\Omega u^2\,dx,\quad F(u) = \int_\Omega u^2\,dx
-                \end{equation*}</p>
 
-                
+                <p>\begin{equation}\label{eq:min-SIR}
+                    E(u) = \int_\Omega u^2(x) \,dx,\quad F(u) = \int_\Omega u^2(x) \,dx.
+                \end{equation}</p>
 
-
-
-                <p>where \(\rho\) is a mass density, \(\phi\) is a pressure, and \(\delta U(\rho)\) is the Frechet derivative of \(U\) at \(\rho\). This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
-                <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
-                then the PDE becomes the <b>porous medium equation</b>,
-                <p>$$\partial_t \rho - \Delta (\rho^m) = 0.$$</p>
-                <p>We solve this PDE via <b>the JKO scheme</b> [<a href="#ref-jko">2</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
-
-                <p>$$\rho^{(n+1)} = \text{arg}\min_{\rho}\, U(\rho) + \frac{1}{2\tau} W_2(\rho, \rho^{(n)})^2$$</p>
-
-                <p>where \(\tau\) is a time step size, \(W_2\) is a 2-Wasserstein distance, and \(\rho^{(n)}\) is an approximate solution \(\rho(n\tau, \cdot)\) of the PDE.
-                We solve developed an algorithm to solve the JKO scheme expanding upon <b>the back-and-forth method (BFM)</b> [<a href="#ref-bfm">3</a>], a fast numerical method for optimal transport problems.</p> 
-                <p> Below are some of our results solving difficult PDE problems including porous medium equations, incompressible flows, and aggregation-diffusion equations.</p> 
-
+                <p> \(E(\rho_I)\) is the terminal cost functional that minimizes the total mass of infectious population density. \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) are costs of transporting the population densities of group \(i=S,I,R\). \(F(\rho_S+\rho_I+\rho_R\) is the concentraion cost of the total mass of populations. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the transportation costs of each population, the total populations concentration, and the total mass of the infectious population density at the terminal time \(T\).</p>
 
             </div>
         </div>
