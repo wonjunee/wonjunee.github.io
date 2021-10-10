@@ -147,7 +147,7 @@
               <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/quadratic-potential-star-obstacle-m-4.mp4" allowfullscreen></iframe>
             </div> -->
 
-            <video width="320" height="240" controls>
+            <video width="100%" height="100%" controls>
               <source src="https://flavienleger.github.io/resources/gf/quadratic-potential-star-obstacle-m-4.mp4" type="video/mp4">
               <!-- <source src="movie.ogg" type="video/ogg"> -->
             Your browser does not support the video tag.
@@ -208,9 +208,6 @@
                 <p id="ref-jko">[2] Richard Jordan and David Kinderlehrer and Felix Otto. The variational formulation of the Fokker-Planck equation. SIAM journal on mathematical analysis 29.1 (1998): 1–17.</p>
                 <p id="ref-bfm">[3] Matt Jacobs and Flavien Léger. <a href="https://arxiv.org/pdf/1905.12154.pdf"> A fast approach to optimal transport: The back-and-forth method.</a> Numerische Mathematik (2020): 1-32.</p>
 
-                <a class="btn btn-outline-secondary" href="https://wasserstein-gradient-flows.netlify.app" role="button">
-                Code
-                </a>
             </div>
         </div>
     </div>
