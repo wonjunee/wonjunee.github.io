@@ -108,7 +108,7 @@
                 <p>$$\partial_t \rho - \Delta (\rho^m) = 0.$$</p>
                 <p>We solve this PDE via the JKO scheme [<a href="#ref-jko">1</a>], a discrete-in-time variational formulation of the PDE. Given \(\rho^{(0)}\), the scheme iterates</p>
 
-                <p>$$\rho^{(n+1)} = \text{argmin}_{1\leq j\leq n}.$$</p>
+                <p>$$\rho^{(n+1)} = \text{arg}\min_{1\leq j\leq n}.$$</p>
 
                 <p>We solve this variational formulation expanding upon the back-and-forth method (BFM) [<a href="#ref-wgf">2</a>], a fast numerical method for optimal transport problems.</p> 
             </div>
