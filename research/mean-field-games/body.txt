@@ -59,7 +59,7 @@
                         <a class="nav-link" href="../gradient-flow">Gradient Flows</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link active" style="background-color: #F5F5F5; border-bottom:1px solid #F5F5F5;" href="#">Mean Field Games</a>
+                          <a class="nav-link active" style="background-color: #F5F5F5; border-bottom:1px solid #F5F5F5;" href="#">Optimal Control</a>
                       </li>
                     </ul>
                 </div>
@@ -100,7 +100,7 @@
                         \frac{dR(t)}{dt} &= \gamma I(t)
                     \end{aligned}$$
                 </p>
-                <p>where \(S,I,R\) represent the numbers of susceptible, infected, and recovered populations, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \( \{S,I,R\} \), without giving local spatial information. We will extend this system of ODEs to the follosing system of PDEs. </p>
+                <p>where \(S,I,R\) represent the numbers of susceptible, infected, and recovered populations, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \( \{S,I,R\} \), without giving local spatial information. We extend this system of ODEs to the following system of PDEs. </p>
 
                 <p>$$\begin{aligned} 
                         & \partial_t \rho_S + \nabla \cdot (\rho_S v_S) + \beta \rho_S \rho_I - \frac{\eta_S^2}{2}\Delta \rho_S = 0\\
@@ -109,7 +109,15 @@
                     \end{aligned}$$
                 </p>
 
-                <p>where \(\rho_i,\,(S,I,R)\) are the population densities of each group, and \(v_i,\,(S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\).</p>
+                <p>where \(\rho_i \,(i\in S,I,R)\) are the population densities of each group and \(v_i \,(i\in S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\). Using this spatial SIR model, we introduce the mean field optimal control model,</p>
+
+                <p>\begin{equation}\label{hello}
+                    \phi+\psi < c
+                    \end{equation}
+                }
+                </p>
+
+
 
                 <p>where \(\rho\) is a mass density, \(\phi\) is a pressure, and \(\delta U(\rho)\) is the Frechet derivative of \(U\) at \(\rho\). This class of PDEs models various physical phenomena such as ﬂuid ﬂow, heat transfer, aggregation-diﬀusion, and crowd motion. For example, if</p>
                 <p>$$U(\rho) = \frac{1}{m-1} \int \rho^m \, dx,$$</p>
