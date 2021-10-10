@@ -176,7 +176,7 @@
                     V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) \\
                 \end{aligned}
                 $$</p>
-                <p>$$u_\infty(t) &=
+                <p>$$u_\infty(t) =
                         \begin{cases}
                             0 & \text{if } 0 \leq t \leq 1\\
                             \infty & \text{otherwise.}
