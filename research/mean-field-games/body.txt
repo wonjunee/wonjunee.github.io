@@ -132,7 +132,7 @@
                     E(u) = \int_\Omega u^2(x) \,dx,\quad F(u) = \int_\Omega u^2(x) \,dx.
                 \end{equation}</p>
 
-                <p> \(E(\rho_I)\) is the terminal cost functional that minimizes the total mass of infectious population density. The function \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) is the transportation cost of the population density of each group \(i=S,I,R\). The functional \(F(\rho_S+\rho_I+\rho_R)\) is the concentraion cost of the total mass of populations. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the transportation costs of each population, the total populations concentration, and the total mass of the infectious population density at the terminal time \(T\).</p>
+                <p> The functional \(E(\rho_I)\) is the terminal cost that minimizes the total mass of infectious population density at the terminal time \(T\). The function \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) is the transportation cost of the population density of each group \(i=S,I,R\). The functional \(F(\rho_S+\rho_I+\rho_R)\) is the concentraion cost of the total mass of populations. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the total number of infectious people at the terminal time while minimizing transportation and concentration costs.</p>
 
             </div>
         </div>
