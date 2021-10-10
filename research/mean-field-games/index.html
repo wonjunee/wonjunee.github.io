@@ -108,18 +108,18 @@
                 </p>
                 <p>where \(S,I,R\) represent the numbers of susceptible, infected, and recovered populations, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \( \{S,I,R\} \), without giving local spatial information. We extend this system of ODEs to the following system of PDEs. </p>
 
-                <p>$$\begin{aligned} 
+                <p>\begin{equation}\label{eq:spatial-SIR}\begin{aligned} 
                         & \partial_t \rho_S + \nabla \cdot (\rho_S v_S) + \beta \rho_S \rho_I - \frac{\eta_S^2}{2}\Delta \rho_S = 0\\
                         & \partial_t \rho_I + \nabla \cdot (\rho_I v_I) - \beta \rho_S \rho_I + \gamma \rho_I - \frac{\eta_I^2}{2}\Delta \rho_I = 0\\
                         & \partial_t \rho_R + \nabla \cdot (\rho_R v_R) - \gamma \rho_R - \frac{\eta_R^2}{2}\Delta \rho_R = 0
-                    \end{aligned}$$
+                    \end{aligned}\end{equation}
                 </p>
 
                 <p>where \(\rho_i \,(i\in S,I,R)\) are the population densities of each group and \(v_i \,(i\in S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\). Using this spatial SIR model, we introduce the mean field optimal control model,</p>
 
-                <p>\begin{equation}\label{hello}
-                    \phi+\psi < c
-                    \end{equation}
+                <p>\begin{equation*}
+                        \inf_{\rho_i,v_i} E(\rho_I) + \int^T_0 \int_\Omega \sum_{i=S,I,R} \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + \mathcal{F}((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt
+                    \end{equation*}
                 </p>
 
                 <p>\eqref{hello}</p>
