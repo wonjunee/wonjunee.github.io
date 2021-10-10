@@ -126,7 +126,12 @@
         <div class="row  justify-content-center">
             <div class="col-md-8">
                 <h4>Videos</h4>
+            </div>
+        </div>
+    </div>
 
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
                 <p><b>Porous medium equations with an obstacle and potential</b></p>
 
                 <p>$$
@@ -135,21 +140,33 @@
                     V(x) &= \|x - a\|^2,\quad a=(0.9,0.9) .
                 \end{aligned}
                 $$</p>
+        </div></div>
                 
-                <div class="embed-responsive embed-responsive">
+        <div class="row  justify-content-center"><div class="col-md-4">
+                <div class="embed-responsive embed-responsive-4by3">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/quadratic-potential-star-obstacle-m-4.mp4" allowfullscreen></iframe>
                 </div>
+        </div></div>
+    </div>
 
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
                 <p><b>Aggregation-diffusion equations</b></p>
 
                 <p>$$
                     U(\rho) = \int \rho^2(x)\,dx + \int \int \rho(x) \|x-y\|^2 \rho(y) \, dx\,dy.
                 $$</p>
+        </div></div>
                 
-                <div class="embed-responsive embed-responsive">
+        <div class="row  justify-content-center"><div class="col-md-4">
+                <div class="embed-responsive embed-responsive-4by3">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/aggregation3d.mp4" allowfullscreen></iframe>
                 </div>
+        </div></div>
+    </div>
 
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
                 <p><b>Incompressible flows (crowd motion) an obstacle and potential</b></p>
 
                 <p>$$
@@ -163,12 +180,13 @@
                         \end{cases}
                 \end{aligned}
                 $$</p>
-                
-                <div class="embed-responsive embed-responsive">
+        </div></div>
+
+        <div class="row  justify-content-center"><div class="col-md-4">
+                <div class="embed-responsive embed-responsive-4by3">
                   <iframe class="embed-responsive-item" src="https://flavienleger.github.io/resources/gf/incompressible-fourballs.mp4" allowfullscreen></iframe>
                 </div>
-            </div>
-        </div>
+        </div></div>
     </div>
     
 
