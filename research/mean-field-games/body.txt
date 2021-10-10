@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Wonjun Lee">
+    <meta name="generator" content="Hugo 0.83.1">
+  
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+
+
+<header>
+        <div class="empty-row-4"></div>
+        
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-6">
+                    <h3>Wonjun Lee</h3>
+                    <%personal%>
+                    <%office%>
+                </div>
+                <%profile-photo%>
+            </div>
+        </div>
+
+        <div class="padding-top"></div> <!-- ------------------------------ -->
+        
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Research Interests</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Gradient Flows</a>
+                      </li>
+                      <a class="nav-link active" style="background-color: #F5F5F5; border-bottom:1px solid #F5F5F5;" href="#">Mean Field Games</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</header>
+
+
+
+<main>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>Research Interests</h4>
+                <p>My research focuses on developing fast and accurate algorithms for optimal transport and the implementations to solve PDEs and real-world problems arising in image processing and machine learning. Below is the list of my research interests.</p>
+                <ul>
+                    <li>PDE-based machine learning and image processing</li>
+                    <li>Optimization</li>
+                    <li>Optimal transport</li> 
+                    <li>Gradient flows</li> 
+                    <li>Mean field games</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="empty-row-1"></div>
+
+    
+    
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <button type="button" class="btn btn-primary" onclick="location.href='./../';">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-blank">
+    </div>
+</main>
+</body>
+
+
+</html>                
