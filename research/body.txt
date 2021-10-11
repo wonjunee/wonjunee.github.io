@@ -80,6 +80,7 @@
                     <li>Optimal transport</li> 
                     <li>Gradient flows</li> 
                     <li>Mean field games</li>
+                    <li>Optimal control</li>
                 </ul>
             </div>
         </div>
