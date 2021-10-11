@@ -61,7 +61,7 @@
 
                 
                 <ul class="b"> 
-                    <li>W. Li, W. Lee, S. Osher</li>
+                    <li>Wuchen Li, Wonjun Lee, Stanley Osher</li>
                     <li>Submitted, 2021.</li>
                 </ul>
 
@@ -90,7 +90,7 @@
                 <p><b>Tropical Optimal Transport and Wasserstein Distances in Phylogenetic Tree Space</b></p>
 
                 <ul class="b"> 
-                    <li>W. Lee, <a href="https://people.math.sc.edu/wuchen/index.html">W. Li</a>, <a href="https://linbo.one">B. Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">A. Monod</a></li>
+                    <li>Wonjun Lee, <a href="https://people.math.sc.edu/wuchen/index.html">Wuchen Li</a>, <a href="https://linbo.one">Bo Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">Anthea Monod</a></li>
                     <li>Information Geometry, June, 2021.</li>
                 </ul>
 
@@ -125,7 +125,7 @@
 
                 
                 <ul class="b"> 
-                    <li>W. Lee, S. Liu, W. Li, S. Osher</li>
+                    <li>Wonjun Lee, Siting Liu, Wuchen Li, Stanley Osher</li>
                     <li> Submitted, Apr, 2021.</li>
                 </ul>
 
@@ -156,7 +156,7 @@
 
                 
                 <ul class="b"> 
-                    <li><a href="https://www.math.ucla.edu/~majaco/">M. Jacobs</a>, W. Lee, <a href="https://flavienleger.github.io">F. L&#233;ger</a> </li>
+                    <li><a href="https://www.math.ucla.edu/~majaco/">Matt Jacobs</a>, Wonjun Lee, <a href="https://flavienleger.github.io">Flavien L&#233;ger</a> </li>
                     <li> ESAIM: COCV, 27:28, 2021. </li> 
                 </ul>
 
@@ -190,7 +190,7 @@
  
                 
                 <ul class="b"> 
-                    <li>W. Lee, S. Liu, H. Tembine, W. Li, S. Osher</li>
+                    <li>Wonjun Lee, Siting Liu, Hamidou Tembine, Wuchen Li, Stanley Osher</li>
                     <li> SIAM Journal on Applied Math, Dec, 2020. </li> 
                 </ul>
 
@@ -219,7 +219,7 @@
                 <p><b>Joint Task Assignment and Trajectory Optimization for a Mobile Robot Swarm by Mean-Field Game</b>  </p>
  
                 <ul class="b"> 
-                    <li> Y. Kang, S. Liu, W. Lee, H. Zhang, W. Li, Z. Han</li>
+                    <li> Yuhan Kang, Siting Liu, Wonjun Lee, Hongliang Zhang, Wuchen Li, Zhu Han</li>
                     <li> IEEE GLOBECOM, Dec, 2020. </li> 
                 </ul>
 
@@ -250,7 +250,7 @@
 
                 
                 <ul class="b"> 
-                    <li> H. Gao, W. Lee, W. Li, Z. Han, S. Osher, V. Poor  </li>
+                    <li> H. Gao, Wonjun Lee, Wuchen Li, Zhu Han, Stanley Osher, Vincent Poor  </li>
                     <li> IEEE GLOBECOM, Dec, 2020. </li> 
                 </ul>
 
@@ -282,7 +282,7 @@
 
                 
                 <ul class="b">
-                    <li>W. Lee, <a href="http://homepages.rpi.edu/~lair/">R. Lai</a>, W, Li, S. Osher</li>
+                    <li>Wonjun Lee, <a href="http://homepages.rpi.edu/~lair/">Rongjie Lai</a>, Wuchen Li, Stanley Osher</li>
                     <li> Journal of Computational Physics, Nov, 2020. </li>
                 </ul>
 
