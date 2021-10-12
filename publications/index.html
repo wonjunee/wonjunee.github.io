@@ -20,8 +20,21 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Adding MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'all'  // should be 'ams', 'none', or 'all'
+        }
+      };
+      </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- End of MathJax -->
     
-  <link rel="stylesheet" type="text/css" href="../styles.css">
+    <!-- Adding my style -->
+    <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
 
 <body>
@@ -109,7 +122,7 @@
 
                 <div class="collapse" id="collapseTropical2021">
                   <div class="card card-body">
-                    We study the problem of optimal transport on phylogenetic tree space from the perspective of tropical geometry, and thus define the Wasserstein-p distances for probability measures in this continuous metric measure space setting. With respect to the tropical metric —- a combinatorial metric on the space of phylogenetic trees —- the cases of p = 1, 2 are treated in detail, which give an efficient way to compute geodesics and also provide theoretical foundations for geometric insight a statistical framework on tree space. We construct explicit algorithms for the computation of the tropical Wasserstein-1 and 2 distances, and prove their convergence. Our results provide the first study of the Wasserstein distances and optimal transport on sets of phylogenetic trees. Several numerical examples are provided.
+                    We study the problem of optimal transport on phylogenetic tree space from the perspective of tropical geometry, and thus define the Wasserstein-p distances for probability measures in this continuous metric measure space setting. With respect to the tropical metric -- a combinatorial metric on the space of phylogenetic trees -- the cases of \(p = 1, 2)\are treated in detail, which give an efficient way to compute geodesics and also provide theoretical foundations for geometric insight a statistical framework on tree space. We construct explicit algorithms for the computation of the tropical Wasserstein-1 and 2 distances, and prove their convergence. Our results provide the first study of the Wasserstein distances and optimal transport on sets of phylogenetic trees. Several numerical examples are provided.
                   </div>
                 </div>
             </div>
@@ -205,7 +218,7 @@
 
                 <div class="collapse" id="collapseControl2020">
                   <div class="card card-body">
-                    The  coronavirus  disease  2019  (COVID-19)  pandemic  is  changing  and  im-pacting lives on a global scale.  In this paper, we introduce a mean-field control modelin controlling the propagation of epidemics on a spatial domain.  The control variable,the spatial velocity, is first introduced for the classical disease models, such as the SIRmodel.  For this proposed model, we provide fast numerical algorithms based on proxi-mal primal-dual methods.  Numerical experiments demonstrate that the proposed modelillustrates how to separate infected patients in a spatial domain effectively. 
+                    The  coronavirus  disease  2019  (COVID-19)  pandemic  is  changing  and  impacting lives on a global scale.  In this paper, we introduce a mean-field control modelin controlling the propagation of epidemics on a spatial domain.  The control variable,the spatial velocity, is first introduced for the classical disease models, such as the SIRmodel.  For this proposed model, we provide fast numerical algorithms based on proximal primal-dual methods.  Numerical experiments demonstrate that the proposed modelillustrates how to separate infected patients in a spatial domain effectively. 
                   </div>
                 </div>
             </div>
