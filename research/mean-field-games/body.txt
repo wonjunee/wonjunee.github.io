@@ -216,7 +216,7 @@
                 <h4>References</h4>
                 
                 <p id="ref-main">[1] Wonjun Lee, Siting Liu, Hamidou Tembine, Wuchen Li, and Stanely Osher. <a href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games">Controlling propagation of epidemics via mean-field games</a>. 2020.</p>
-                <p id="ref-gprox">[2] Matt Jacobs, Flavien Leger, Wuchen Li, and Stanley Osher. Solving Large-Scale Optimization Problems with a Con- vergence Rate Independent of Grid Size. SIAM Journal on Numerical Analysis., 57(3), 1100-1123, 2019.</p>
+                <p id="ref-gprox">[2] Matt Jacobs, Flavien Leger, Wuchen Li, and Stanley Osher. Solving Large-Scale Optimization Problems with a Convergence Rate Independent of Grid Size. SIAM Journal on Numerical Analysis., 57(3), 1100-1123, 2019.</p>
             </div>
         </div>
     </div>
