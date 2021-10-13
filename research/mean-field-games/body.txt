@@ -190,7 +190,7 @@
 
         <div class="row  justify-content-center">
             <div class="col-md-8">
-                <p>The solution from the minimization problem \eqref{eq:min-SIR} moves the susceptible people away from the region where infectious people are located. As a result, the solution finds a better strategy to reduce the total number of infected people at the terminal time (56.84 with control vs. 61.85 without control).</p>
+                <p>The solution from the minimization problem \eqref{eq:min-SIR} moves the susceptible people away from the region where infectious people are located. As a result, the solution finds a better strategy to reduce the total number of infected people at the terminal time (<b>56.84</b> <i>with control</i> vs. <b>61.85</b> <i>without control</i>).</p>
             </div>
         </div>
     </div>
