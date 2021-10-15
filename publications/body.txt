@@ -103,7 +103,7 @@
                 <p><b>Tropical Optimal Transport and Wasserstein Distances in Phylogenetic Tree Space</b></p>
 
                 <ul class="b"> 
-                    <li>Wonjun Lee, <a href="https://people.math.sc.edu/wuchen/index.html">Wuchen Li</a>, <a href="https://linbo.one">Bo Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">Anthea Monod</a></li>
+                    <li>Wonjun Lee, Wuchen Li, <a href="https://linbo.one">Bo Lin</a>, <a href="https://www.imperial.ac.uk/people/a.monod">Anthea Monod</a></li>
                     <li>Information Geometry, June, 2021.</li>
                 </ul>
 
@@ -295,7 +295,7 @@
 
                 
                 <ul class="b">
-                    <li>Wonjun Lee, <a href="http://homepages.rpi.edu/~lair/">Rongjie Lai</a>, Wuchen Li, Stanley Osher</li>
+                    <li>Wonjun Lee, <a href="http://homepages.rpi.edu/~lair/">Rongjie Lai</a>, <a href="https://people.math.sc.edu/wuchen/index.html">Wuchen Li</a>, Stanley Osher</li>
                     <li> Journal of Computational Physics, Nov, 2020. </li>
                 </ul>
 
