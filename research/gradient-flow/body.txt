@@ -92,7 +92,7 @@
             <div class="col-md-8">
                 <p> This page briefly describes the paper, <b>The back-and-forth method for Wasserstein gradient flows</b> [<a href="#ref-wgf">1</a>]. To see the details, check the <b>PDF</b> and <b>Code</b> links above.</p>
                 <br>
-                <p> In this project, we proposed a new algorithm to compute the following class of PDEs (also known as <i>Darcy's law</i>): </p>
+                <p> In this project, we proposed a new algorithm to compute the following class of PDEs (also known as <b>Darcy's law</b>): </p>
                 <p>$$\begin{aligned} 
                         \partial_t \rho - \nabla \cdot (\rho \nabla \phi)=0&\\
                         \phi = \delta U(\rho)&
