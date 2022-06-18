@@ -19,6 +19,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="/favicon.ico">
 </head>
 
 <body>
@@ -29,11 +30,12 @@
             <div class="row  justify-content-center">
                 <div class="col-md-6">
                     <h3>Wonjun Lee</h3>
-                    <%personal%>
-                    <%office%>
+<h5>Assistant Adjunct Professor</h5>
+<h6>Department of Mathematics </h6>
+<h6>University of California, Los Angeles</h6><h6>Office : Virtual</h6>
                 </div>
-                <%profile-photo%>
-            </div>
+<div class="col-md-2">
+<img src="https://avatars2.githubusercontent.com/u/17661230?s=460&v=4" alt="profile photo" style="width:130px;height:130px;border-radius:10px;margin-top:0px;"></div>            </div>
         </div>
     </header>
 
@@ -44,7 +46,7 @@
             <div class="row  justify-content-center">
                 <div class="col-md-8">
                     <h4>About</h4>
-                    <p> I am an applied math Ph.D. candidate studying under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
+                    <p> I completed my Ph.D. in mathematics in 2022 under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
                 </div>
             </div>
         </div>
@@ -53,7 +55,7 @@
             <div class="row  justify-content-center">
                 <div class="col-md-8">
                     <h4>Email</h4>
-                    <p>wlee at math.ucla.edu</p>
+                    <p>wlee10 at ucla.edu</p>
                 </div>
             </div>
         </div>
@@ -104,7 +106,7 @@
                               </a>
                               <div class="dropdown-menu p-0" aria-labelledby="navbarDropdownMenuLink">
                                 <!-- <a class="dropdown-item" href="./pic16a_21sa/home/">2021 Summer A - PIC 16A: Python With Applications - Dis 1A, 1B</a> -->
-                                <a class="dropdown-item">No teaching</a>
+                                <a class="dropdown-item" href="#">Summer A - PIC 10A: Introduction to Programming C++</a>
                               </div>
                             </li>
                           </ul>
