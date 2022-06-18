@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wonjun Lee</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Wonjun Lee">
+    <meta name="generator" content="Hugo 0.83.1">
+  
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+  <link rel="stylesheet" type="text/css" href="../../styles.css">
+
+
+  <!-- Adding MathJax -->
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'all'  // should be 'ams', 'none', or 'all'
+      }
+    };
+    </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- End of MathJax -->
+</head>
+
+<body>
+
+
+<header>
+        <div class="empty-row-4"></div>
+        
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-6">
+                    <h3>Wonjun Lee</h3>
+<h5>Ph.D. Candidate</h5>
+<h6>Department of Mathematics </h6>
+<h6>University of California, Los Angeles</h6><h6>Office : Virtual</h6>
+                </div>
+<div class="col-md-2">
+<img src="https://avatars2.githubusercontent.com/u/17661230?s=460&v=4" alt="profile photo" style="width:130px;height:130px;border-radius:10px;margin-top:0px;"></div>            </div>
+        </div>
+
+        <div class="padding-top"></div> <!-- ------------------------------ -->
+        
+        <div class="container bg-3">
+            <div class="row  justify-content-center">
+                <div class="col-md-8">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link" href="../">Research Interests</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="../gradient-flow">Gradient Flows</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" style="background-color: #F5F5F5; border-bottom:1px solid #F5F5F5;" href="#">Optimal Control</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+</header>
+
+
+
+<main>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>Controlling Propagation of Epidemics via Mean-Field Games</h4>
+                
+                <a class="btn btn-outline-secondary" href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games" role="button">
+                PDF
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <p> This page briefly describes the paper, <b>Controlling Propagation of Epidemics via Mean-Field Games</b> [<a href="#ref-main">1</a>]. To see the details, check the <b>PDF</b> link above.</p>
+
+                <p> In this project, we proposed a <i>new mean-field optimal control formulation</i> to control the propagation of epidemics. Consider one of the simplest epidemiologic models, Susceptible-Infective-Recovered (SIR) model</p>
+                <p>\begin{equation*}\begin{aligned} 
+                        \frac{dS(t)}{dt} &= -\beta S(t) I(t)\\
+                        \frac{dI(t)}{dt} &= \beta S(t) I(t) - \gamma I(t)\\
+                        \frac{dR(t)}{dt} &= \gamma I(t)
+                    \end{aligned}\end{equation*}
+                </p>
+                <p>where \(S,I,R\) represent the numbers of susceptible, infected, and recovered populations, respectively. Susceptible people become infected with an infection rate \(\beta\) and infcetious people become recovered with a recovery rate \(\gamma\). Note that the model computes the dynamics of the total number of populations of each group, \( \{S,I,R\} \), without giving local spatial information. We extend this system of ODEs to the following system of PDEs. </p>
+
+                <p>\begin{equation}\label{eq:spatial-SIR}\begin{aligned} 
+                        & \partial_t \rho_S + \nabla \cdot (\rho_S v_S) + \beta \rho_S \rho_I - \frac{\eta_S^2}{2}\Delta \rho_S = 0\\
+                        & \partial_t \rho_I + \nabla \cdot (\rho_I v_I) - \beta \rho_S \rho_I + \gamma \rho_I - \frac{\eta_I^2}{2}\Delta \rho_I = 0\\
+                        & \partial_t \rho_R + \nabla \cdot (\rho_R v_R) - \gamma \rho_I - \frac{\eta_R^2}{2}\Delta \rho_R = 0
+                    \end{aligned}\end{equation}
+                </p>
+
+                <p>where \(\rho_i:[0,T]\times\Omega\rightarrow [0,\infty) \,(i\in S,I,R)\) are the population densities of each group and \(v_i:[0,T]\times\Omega\rightarrow \mathbb{R}^d \,(i\in S,I,R)\) are velocity fields of each group on a spatial domain \(\Omega\subset \mathbb{R}^d\). Using this spatial SIR model, we introduce the mean field optimal control formulation,</p>
+
+                <p>\begin{equation}\label{eq:min-SIR}
+                    \begin{aligned}
+                        &\inf_{\rho_i,v_i} E(\rho_I(T,\cdot)) +  \int^T_0 \sum_{i=S,I,R} \int_\Omega \frac{\alpha_i}{2} \rho_i |v_i|^2\, dx + F((\rho_S+\rho_I+\rho_R)(t,\cdot))\, dt\\
+                        &\text{subject to \eqref{eq:spatial-SIR}, given } \rho_i(0,\cdot)\,(i=S,I,R)
+                    \end{aligned}
+                    \end{equation}
+                </p>
+
+                <p>where \(E,F\) are lower semi-continuous and convex functionals, for example</p>
+
+                <p>\begin{equation*}
+                    E(u) = \int_\Omega u^2(x) \,dx,\quad F(u) = \int_\Omega u^2(x) \,dx.
+                \end{equation*}</p>
+
+                <p> The functional \(E(\rho_I)\) is the terminal cost that minimizes the total mass of infectious population density at the terminal time \(T\). The function \(\frac{\alpha_i}{2}\rho_i|v_i|^2\) is the transportation cost of the population density of each group \(i=S,I,R\). The functional \(F(\rho_S+\rho_I+\rho_R)\) represents the concentration of population. In sum, the minimization problem \eqref{eq:min-SIR} finds optimal velocities and densities such that evolutions of densities minimize the total number of infectious people at the terminal time while minimizing transportation costs and the concentration of population.</p>
+
+                <p> Note that this is a nonconvex optimization problem with a nonlinear constraint. We developed an algorithm based on general proximal primal-dual hybrid gradient (G-prox PDHG) method [<a href="#ref-gprox">2</a>]. Below, we present some of the results generated by the algorithm. We set \(\beta=0.6,\gamma=0.1\). The videos show the evolution of densities from the solutions of the minimization problem (labeled <i>with control</i>) and the solutions of the following system of PDEs without velocity fields control (labeled <i>without control</i>):</p>
+
+                <p>\begin{equation*}\begin{aligned}
+                        & \partial_t \rho_S(t,x) + \beta \rho_S(t,x) \rho_I(t,x) = 0\\
+                        & \partial_t \rho_I(t,x) - \beta \rho_S (t,x)\rho_I(t,x) + \gamma \rho_I(t,x) = 0\\
+                        & \partial_t \rho_R(t,x) - \gamma \rho_I(t,x) = 0.
+                    \end{aligned}\end{equation*}
+                </p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>Example</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>Without control</b></p>
+        </div></div>
+                
+        <div class="row  justify-content-center"><div class="col-md-8">
+            <video width="100%" height="100%" controls>
+              <source src="./resources/video_without_control.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div></div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>With control</b></p>
+        </div></div>
+                
+        <div class="row  justify-content-center"><div class="col-md-8">
+            <video width="100%" height="100%" controls>
+              <source src="./resources/video_with_control.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div></div>
+
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <p>The solution from the minimization problem \eqref{eq:min-SIR} moves the susceptible population density away from the region where infectious population density is located. As a result, the solution finds a better strategy to reduce the total mass of infected population denstiy at the terminal time (<b>0.0125</b> <i>with control</i> vs. <b>0.0133</b> <i>without control</i>).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center"><div class="col-md-8">
+                <p><b>Comparison of the total number of infected people between with and without control</b></p>
+        </div></div>
+        <div class="row  justify-content-center"><div class="col-md-4">
+            <div class="text-center">
+            <img src="./resources/comparison_with_without.png" class="rounded" alt="Comparison">
+            </div>
+        </div></div>
+    </div>
+
+    <div class="empty-row-1"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <h4>References</h4>
+                
+                <p id="ref-main">[1] Wonjun Lee, Siting Liu, Hamidou Tembine, Wuchen Li, and Stanely Osher. <a href="https://www.researchgate.net/publication/341804278_Controlling_Propagation_of_epidemics_via_mean-field_games">Controlling propagation of epidemics via mean-field games</a>. 2020.</p>
+                <p id="ref-gprox">[2] Matt Jacobs, Flavien Leger, Wuchen Li, and Stanley Osher. Solving Large-Scale Optimization Problems with a Convergence Rate Independent of Grid Size. SIAM Journal on Numerical Analysis., 57(3), 1100-1123, 2019.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+                <button type="button" class="btn btn-primary" onclick="location.href='./../../';">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-blank">
+    </div>
+
+</main>
+</body>
+
+
+</html>                
