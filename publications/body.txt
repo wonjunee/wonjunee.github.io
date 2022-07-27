@@ -79,7 +79,7 @@
                 
                 <ul class="b"> 
                     <li>Wonjun Lee, Siting Liu, Wuchen Li, Stanley Osher</li>
-                    <li> Research in the Mathematical Sciences, Jul, 2022.</li>
+                    <li> Research in the Mathematical Sciences, 2022.</li>
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseMFGVaccine2021" role="button" aria-expanded="false" aria-controls="collapseMFGVaccine2021">
@@ -110,7 +110,7 @@
                 
                 <ul class="b"> 
                     <li>Wuchen Li, Wonjun Lee, Stanley Osher</li>
-                    <li>Submitted, 2021.</li>
+                    <li>Journal of Computational Physics, 2021.</li>
                 </ul>
 
                 <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseCompu2021" role="button" aria-expanded="false" aria-controls="collapseCompu2021">
