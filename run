@@ -2,5 +2,6 @@
 
 python html_replace.py
 
-scp -r * wlee@joshua02.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
+# scp -r past_teaching index.html body.txt wlee@joshua02.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
+scp -r favicon.ico index.html body.txt wlee@joshua02.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
 # scp -r publications wlee@joshua01.math.ucla.edu:/net/walnut/h1/agrad/wlee/public_html
