@@ -46,7 +46,7 @@
                 <div class="col-md-8">
                     <h4>About</h4>
                     <p> I completed my Ph.D. in mathematics in 2022 under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
-                    <p> Beginning in August 2022, I will begin my postdoctoral work as a joint NIST-IMA Postdoctoral fellow in Analysis of Machine Learning at the Institute for Mathematics and its Applications (IMA) at the University of Minnesota (UMN).</p>
+                    <p> I am a joint NIST-IMA Postdoctoral fellow in Analysis of Machine Learning at the Institute for Mathematics and its Applications (IMA) at the University of Minnesota (UMN).</p>
                 </div>
             </div>
         </div>
