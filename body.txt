@@ -47,7 +47,7 @@
                     <h4>About</h4>
                     <p> I completed my Ph.D. in mathematics at University of California, Los Angeles (UCLA) in 2022 under the guidance of Prof. <a href="https://www.math.ucla.edu/~sjo/"><b>Stanley Osher</b></a>. </p>
                     <p> I am a joint NIST-IMA Postdoctoral fellow in Analysis of Machine Learning at the Institute for Mathematics and its Applications (IMA) at the University of Minnesota (UMN).</p>
-                    <p> Here is the <a href="https://raw.githubusercontent.com/wonjunee/CV_latex/9aeda9d8f88298695d4bc8d07d86498e40746ecd/resume.pdf"><b>link</b></a> to my CV.</p>
+                    <p> Here is the <a href="./cv"><b>link</b></a> to my CV.</p>
                     <!-- <p> I am currently working with Professor Jeff Calder, Profesor Gilad Lerman, and Professor Li Wang. </p> -->
                 </div>
             </div>
