@@ -74,6 +74,42 @@
         <div class="row  justify-content-center">
             <div class="col-md-8">
         
+                <p><b>Monotone discretizations of levelset convex geometric PDEs</b></p>
+
+                
+                <ul class="b"> 
+                    <li>Jeff Calder, Wonjun Lee</li>
+                    <li> Preprint, 2023.</li>
+                </ul>
+
+                <a class="btn btn-outline-secondary" data-toggle="collapse" href="#collapseMonotone2023" role="button" aria-expanded="false" aria-controls="collapseMonotone2023">
+                Abstract
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://arxiv.org/abs/2310.08450" role="button">
+                PDF
+                </a>
+
+                <a class="btn btn-outline-secondary" href="https://github.com/wonjunee/monotone-scheme" role="button">
+                Code
+                </a>
+
+                <div class="collapse" id="collapseMonotone2023">
+                  <div class="card card-body">
+                    We introduce a novel algorithm that converges to level-set convex viscosity solutions of high-dimensional Hamilton-Jacobi equations. The algorithm is applicable to a broad class of curvature motion PDEs, as well as a recently developed Hamilton-Jacobi equation for the Tukey depth, which is a statistical depth measure of data points. A main contribution of our work is a new monotone scheme for approximating the direction of the gradient, which allows for monotone discretizations of pure partial derivatives in the direction of, and orthogonal to, the gradient. We provide a convergence analysis of the algorithm on both regular Cartesian grids and unstructured point clouds in any dimension and present numerical experiments that demonstrate the effectiveness of the algorithm in approximating solutions of the affine flow in two dimensions and the Tukey depth measure of high-dimensional datasets such as MNIST and FashionMNIST.
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="empty-row-2"></div>
+
+    <div class="container bg-3">
+        <div class="row  justify-content-center">
+            <div class="col-md-8">
+        
                 <p><b>Mean Field Control Problems For Vaccine Distribution</b></p>
 
                 
