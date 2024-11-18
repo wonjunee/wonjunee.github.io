@@ -21,6 +21,18 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
 
+    <!-- Adding MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          tags: 'all'  // should be 'ams', 'none', or 'all'
+        }
+      };
+      </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- End of MathJax -->
+    
     <!-- Adding my style -->
     <link rel="stylesheet" type="text/css" href="../styles.css">
 </head>
