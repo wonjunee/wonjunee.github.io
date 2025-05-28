@@ -1,6 +1,6 @@
 # Fdb version 4
-["lualatex"] 1747585403.08543 "/Users/lee01273/Downloads/CV_latex/resume.tex" "resume.pdf" "resume" 1747585405.53589 0
-  "/Users/lee01273/Downloads/CV_latex/resume.tex" 1729741221.59671 3723 db869f00ce54546fea9d3dbcb6338d34 ""
+["lualatex"] 1748448071.2668 "/Users/lee01273/Documents/GitHub/wonjunee.github.io/cv/resume.tex" "resume.pdf" "resume" 1748448073.66233 0
+  "/Users/lee01273/Documents/GitHub/wonjunee.github.io/cv/resume.tex" 1729741221.59671 3723 db869f00ce54546fea9d3dbcb6338d34 ""
   "/Users/lee01273/Library/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1721165589.50937 180115 ae2e14b5235ca8081e3dab1cde2b925f ""
   "/Users/lee01273/Library/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1721165589.44159 380940 25bf65a1c7052c5c84eac12c97b187dd ""
   "/Users/lee01273/Library/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/latinmodern-math.luc" 1721165599.96328 637084 244c6dbd2183f226556d5b9e7ee84e78 ""
@@ -272,7 +272,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1443997592 10170 b1a2248f43cab899e3fe36f676176865 ""
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1719624301.35651 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/luahbtex/lualatex.fmt" 1719624221 12256625 3c804b073b76707f86fa2840b0bb952a ""
-  "cv/academicpositions.tex" 1729741221.54279 1730 c6bae5849a4cedee087fdc9f3e9ce612 ""
+  "cv/academicpositions.tex" 1748448055.32641 1869 808a7083805bf696db200d0abf5aa6fc ""
   "cv/achievements.tex" 1727920110.47419 927 0ba202966055229cad9f5e35db6950e4 ""
   "cv/education.tex" 1727920018.76373 1365 af8fd357e0dc75485216f92e24306221 ""
   "cv/languages.tex" 1729741221.54739 751 bcebb134ef6603b06fa79abb13748e6a ""
@@ -282,7 +282,7 @@
   "cv/summary.tex" 1729742031.81359 995 7fe3ea8a8afe18f224ce4fe1bf6ce028 ""
   "cv/teachingexperience.tex" 1729741221.5695 3206 69e23104225f06910038fbcebb3e317b ""
   "cv/workexperience.tex" 1729741221.57343 2833 99612418125515602b15493d8bfbcf01 ""
-  "resume.aux" 1747585405.28119 518 347914bbfe7d84f8049363f42639ed93 "lualatex"
+  "resume.aux" 1748448073.40695 518 347914bbfe7d84f8049363f42639ed93 "lualatex"
   "resume.tex" 1729741221.59671 3723 db869f00ce54546fea9d3dbcb6338d34 ""
   "russell.cls" 1729741320.04942 31601 3b26a3f7868aa6422906b3ef44d7b87a ""
   (generated)
