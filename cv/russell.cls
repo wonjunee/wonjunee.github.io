@@ -771,8 +771,8 @@
 % }
 
 \newcommand*{\cvtalk}[4]{%
-  % \honordatestyle{#4} & \honortitlestyle{#1}, \talklocationstyle{#2}\\
-  \honordatestyle{#4} & \honortitlestyle{#1},  \talktitlestyle{#3}, \talklocationstyle{#2}\\
+  \honordatestyle{#4} & \honortitlestyle{#1}, \talklocationstyle{#2}\\
+  % \honordatestyle{#4} & \honortitlestyle{#1},  \talktitlestyle{#3}, \talklocationstyle{#2}\\
 }
 
 
