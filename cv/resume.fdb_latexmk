@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1769567833.92527 "/Users/lee.8222/Downloads/wonjunee.github.io/cv/resume.tex" "resume.pdf" "resume" 1769567835.73075 0
+["lualatex"] 1769569585.67191 "/Users/lee.8222/Downloads/wonjunee.github.io/cv/resume.tex" "resume.pdf" "resume" 1769569587.53299 0
   "/Users/lee.8222/Downloads/wonjunee.github.io/cv/resume.tex" 1769567142.27276 3704 8c7369d40694181e3dc7e585e04023eb ""
   "/Users/lee.8222/Library/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1759147596.69089 180115 ae2e14b5235ca8081e3dab1cde2b925f ""
   "/Users/lee.8222/Library/texlive/2024/texmf-var/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1759147596.65432 380940 25bf65a1c7052c5c84eac12c97b187dd ""
@@ -276,13 +276,13 @@
   "cv/achievements.tex" 1756156968.18985 927 0ba202966055229cad9f5e35db6950e4 ""
   "cv/education.tex" 1756156968.18992 1365 af8fd357e0dc75485216f92e24306221 ""
   "cv/languages.tex" 1756156968.19008 751 bcebb134ef6603b06fa79abb13748e6a ""
-  "cv/presentations.tex" 1769567830.01197 6488 4687a02c857c0bab0b2be14d7347e305 ""
+  "cv/presentations.tex" 1769569581.66437 6528 ad0ac9238dd982b61b69c1d3f883d783 ""
   "cv/publications.tex" 1756156968.19033 5375 5a0013ded6178df19209c8be26604473 ""
   "cv/service.tex" 1756156968.19041 904 ba510baf6c60e29d697b70c3403060c9 ""
   "cv/summary.tex" 1756156968.19056 1010 640960c93b3a212bf719583145d7f190 ""
   "cv/teachingexperience.tex" 1756156968.19063 3206 69e23104225f06910038fbcebb3e317b ""
   "cv/workexperience.tex" 1756156968.19071 2833 99612418125515602b15493d8bfbcf01 ""
-  "resume.aux" 1769567835.56702 518 347914bbfe7d84f8049363f42639ed93 "lualatex"
+  "resume.aux" 1769569587.35898 518 347914bbfe7d84f8049363f42639ed93 "lualatex"
   "resume.tex" 1769567142.27276 3704 8c7369d40694181e3dc7e585e04023eb ""
   "russell.cls" 1769567786.48562 31601 60837a2cdb9b3974adf54ba213ee6c5e ""
   (generated)
