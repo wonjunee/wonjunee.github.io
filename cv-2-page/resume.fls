@@ -1,6 +1,6 @@
-PWD /Users/lee.8222/Downloads/wonjunee.github.io/cv-one-page
+PWD /Users/lee.8222/Downloads/wonjunee.github.io/cv-2-page
 INPUT /usr/local/texlive/2024/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT /Users/lee.8222/Downloads/wonjunee.github.io/cv-one-page/resume.tex
+INPUT /Users/lee.8222/Downloads/wonjunee.github.io/cv-2-page/resume.tex
 OUTPUT resume.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ltluatex.lua
@@ -281,7 +281,12 @@ OUTPUT resume.pdf
 INPUT ./cv/summary.tex
 INPUT ./cv/academicpositions.tex
 INPUT ./cv/education.tex
-INPUT ./cv/selectedpublications.tex
-INPUT ./cv/languages.tex
+INPUT ./cv/publications.tex
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./cv/presentations.tex
+INPUT ./cv/achievements.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
+INPUT ./cv/service.tex
 INPUT ./resume.aux

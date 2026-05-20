@@ -165,8 +165,8 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{9.5pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{13pt}{1em}\bodyfont\bfseries\color{russell}{#1}}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{russell}{#1}}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{{\fontsize{11pt}{1em}\color{darktext}}}
 
 % For elements of entry
@@ -200,7 +200,7 @@
 \newcommand*{\talktitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\slshape\color{darktext} #1}}
 
 % For elements of the cover letter
-\newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\lettersectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
@@ -508,7 +508,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
+          \hspace{-0.8cm}\href{https://www.\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
@@ -625,7 +625,7 @@
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
-  % \vspace{\acvSectionContentTopSkip}
+  \vspace{\acvSectionContentTopSkip}
   \begin{center}
 }{%
   \end{center}
@@ -642,18 +642,6 @@
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
-  \end{tabular*}%
-}
-
-\newcommand*{\cventryshort}[4]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{2pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-      {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
   \end{tabular*}%
 }
 
@@ -783,8 +771,8 @@
 % }
 
 \newcommand*{\cvtalk}[4]{%
-  % \honordatestyle{#4} & \honortitlestyle{#1}, \talklocationstyle{#2}\\
-  \honordatestyle{#4} & \honortitlestyle{#1},  \talktitlestyle{#3}, \talklocationstyle{#2}\\
+  \honordatestyle{#4} & \honortitlestyle{#1}, \talklocationstyle{#2}\\
+  % \honordatestyle{#4} & \honortitlestyle{#1},  \talktitlestyle{#3}, \talklocationstyle{#2}\\
 }
 
 
@@ -811,16 +799,16 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-8.0mm}
+  \vspace{-4.0mm}
   \begin{justify}
-    % \allowdisplaybreaks
+    \allowdisplaybreaks
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    % \setlength{\parskip}{1mm}
+    \setlength{\parskip}{1mm}
     \renewcommand{\labelitemi}{\bullet}
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-8.0mm}
+  \vspace{-4.0mm}
 }
 
 
