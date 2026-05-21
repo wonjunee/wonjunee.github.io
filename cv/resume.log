@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.8.21)  19 MAY 2026 21:26
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2025.8.21)  20 MAY 2026 22:16
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/Users/lee.8222/Downloads/wonjunee.github.io/cv/resume.tex
@@ -872,6 +872,11 @@ Package hyperref Warning: Suppressing link with empty target on input line 16.
 Package hyperref Warning: Suppressing link with empty target on input line 18.
 
 
+Overfull \hbox (9.31567pt too wide) in paragraph at lines 20--22
+\TU/SourceSansPro(0)/m/it/10.95 Align-ment in Con-trastive Learn-ing[] \TU/SourceSansPro(0)/m/n/10.95 (pre-vi-ously sub-mit-ted in 2025 as ‘Un-der-stand-ing Con-trastive Learn-
+ []
+
+
 Package hyperref Warning: Suppressing link with empty target on input line 22.
 
 
@@ -911,12 +916,12 @@ Here is how much of LuaTeX's memory you used:
  125086,1977958 words of node,token memory allocated
  775 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 19 attribute, 86 glue_spec, 19 attribute_list, 2 write, 11 pdf_action nodes
-   avail lists: 1:2,2:2185,3:428,4:486,5:1033,6:191,7:7876,8:7,9:1257,10:14,11:639
+   avail lists: 1:2,2:2185,3:428,4:486,5:1029,6:191,7:7876,8:7,9:1257,10:14,11:639
  57390 multiletter control sequences out of 65536+600000
  127 fonts using 38586999 bytes
  116i,14n,126p,695b,1110s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-LightIt.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-RegularIt.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Bold.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Brands-Regular-400.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/google/roboto/Roboto-Italic.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/google/roboto/Roboto-Regular.otf>
-Output written on resume.pdf (5 pages, 55594 bytes).
+Output written on resume.pdf (5 pages, 55664 bytes).
 
 PDF statistics: 156 PDF objects out of 1000 (max. 8388607)
  120 compressed objects within 2 object streams
